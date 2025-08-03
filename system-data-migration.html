@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anicia Gan's Portfolio - System / Data Migration Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+        .nav-link.active {
+            border-bottom: 2px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600 mb-4 sm:mb-0">
+                <a href="index.html" class="hover:text-blue-800">Anicia Gan</a>
+            </div>
+            <div class="flex flex-wrap justify-center sm:justify-end gap-x-6 gap-y-2">
+                <a href="index.html#projects" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-1">Projects Overview</a>
+                <a href="capacity-management-geospatial.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-1">Capacity Management (GeoSpatial)</a>
+                <a href="lead-quote-to-cash.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-1">Lead/Quote to Cash</a>
+                <a href="system-data-migration.html" class="nav-link text-blue-600 font-medium transition-colors duration-200 py-1 active">System / Data Migration</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section id="system-data-migration" class="pt-12">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-8">Project: System / Data Migration</h1>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <p class="text-lg text-gray-700 mb-4">
+                    &#128162; **Problem:** After a significant system upgrade or migration to a NextGen platform, a critical challenge emerged: ensuring seamless and accurate consumption of the new data by essential downstream applications. Any discrepancies could lead to operational disruptions and incorrect reporting.
+                </p>
+                <p class="text-lg text-gray-700 mb-4">
+                    &#128161; **Solution:** I played a key role in ensuring data integrity and usability post-migration through the following efforts:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 ml-4 space-y-2 mb-6">
+                    <li>Developed an **SQL-based data quality dashboard** specifically designed for post-migration health monitoring. This dashboard provided real-time visibility into data accuracy, consistency, and completeness, allowing for quick identification and resolution of any issues.</li>
+                    <li>Collaborated with data engineers and source system owners to understand the nuances of data transformation and integration.</li>
+                    <li>Documented the new data consumption and processing workflows in a detailed **Functional Requirements Document (FRD)**. This FRD served as a crucial guide for technical teams and provided a clear understanding of how downstream systems would interact with the migrated data.</li>
+                    <li>Conducted thorough data validation checks and worked with QA teams to design and execute tests specifically for data integrity.</li>
+                    <li>Provided support for data reconciliation and troubleshooting, ensuring all critical applications were functioning correctly with the new data.</li>
+                </ul>
+                <p class="text-md text-gray-600 mb-4">
+                    &#128220; **Tools & Methodologies:** FRD, SQL, Data Dashboards, Data Validation.
+                </p>
+                <div class="mt-8 p-6 bg-gray-100 rounded-lg shadow-inner">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">My Contribution & Impact</h3>
+                    <p class="text-gray-700">
+                        In this migration project, my focus was on the critical "last mile" of data quality and usability. By building the SQL-based dashboard and meticulously documenting the new data processes in the FRD, I enabled proactive monitoring and ensured that business users and downstream systems could confidently rely on the newly migrated data. This significantly reduced post-migration issues and fostered trust in the new system's data integrity.
+                        <br><br>
+                        *(You can expand here with specific figures on error rate reduction, time saved in data validation, or how the dashboard improved visibility for stakeholders.)*
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-6 mt-12">
+        <p>&copy; 2025 Anicia Gan's Portfolio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
