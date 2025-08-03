@@ -10,14 +10,18 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        / Custom smooth scrolling for navigation /
+        /* Custom smooth scrolling for navigation */
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 5rem;
         }
-        / Style for active navigation links /
+        /* Style for active navigation links */
         .nav-link.active {
-            border-bottom: 2px solid #3b82f6; / A blue line under the active tab /
+            border-bottom: 2px solid #3b82f6; /* A blue line under the active tab */
+        }
+        /* Hidden by default for detailed sections */
+        .detailed-section {
+            display: none;
         }
     </style>
 </head>
@@ -26,7 +30,7 @@
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
             <div class="text-2xl font-bold text-blue-600 mb-4 sm:mb-0">
-                <a href="index.html" class="hover:text-blue-800">Anicia Gan</a>
+                <a href="#home" class="hover:text-blue-800">Anicia Gan</a>
             </div>
             <div class="flex flex-wrap justify-center sm:justify-end gap-x-6 gap-y-2">
                 <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-1">Home</a>
@@ -43,309 +47,552 @@
 
     <main class="container mx-auto px-4 py-12 space-y-20">
 
-        <section id="home" class="flex flex-col lg:flex-row items-center justify-between gap-12 pt-12">
-            <div class="lg:w-1/2">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                    Anicia Gan
-                </h1>
-                <p class="mt-2 text-xl font-medium text-blue-600">Business Analyst | Technical and Digital Projects </p>
-                <p class="mt-6 text-lg text-gray-600">
-                    A Technical Business Analyst bridges the gap between business needs and technical solutions. Unlike roles focused solely on project management or high-level data strategy, my expertise lies in the hands-on technical details that drive successful product development.
-                </p>
-                <div class="mt-8 space-y-4">
-                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-blue-500">
-                        <h3 class="text-xl font-semibold text-gray-900">Why I Created This Page</h3>
-                        <p class="mt-2 text-gray-600">
-                            This portfolio was created to address a common challenge &#128679; for technical business analysts: a resume can't capture the full scope of our skills. Here, you'll find tangible examples of my work, proving my proficiency in documentation, data, and design &#128221;&#127912;.
-                        </p>
+        <div id="main-content">
+            <section id="home" class="flex flex-col lg:flex-row items-center justify-between gap-12 pt-12">
+                <div class="lg:w-1/2">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                        Anicia Gan
+                    </h1>
+                    <p class="mt-2 text-xl font-medium text-blue-600">Business Analyst | Technical and Digital Projects </p>
+                    <p class="mt-6 text-lg text-gray-600">
+                        A **Technical Business Analyst** bridges the gap between business needs and technical solutions. Unlike roles focused solely on project management or high-level data strategy, my expertise lies in the hands-on technical details that drive successful product development.
+                    </p>
+                    <div class="mt-8 space-y-4">
+                        <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-blue-500">
+                            <h3 class="text-xl font-semibold text-gray-900">Why I Created This Page</h3>
+                            <p class="mt-2 text-gray-600">
+                                This portfolio was created to address a common challenge &#128679; for technical business analysts: a resume can't capture the full scope of our skills. Here, you'll find tangible examples of my work, proving my proficiency in documentation, data, and design &#128221;&#127912;.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="lg:w-1/2 flex justify-center">
-                <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden">
-                    <img src="photo_2025-08-02 11.02.40.jpeg" alt="Anicia Gan's professional headshot" class="object-cover w-full h-full">
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden">
+                        <img src="photo_2025-08-02 11.02.40.jpeg" alt="Anicia Gan's professional headshot" class="object-cover w-full h-full">
+                    </div>
                 </div>
-            </div>
-        </section>
-        
-        <hr class="border-gray-200" />
-
-        <section id="profile" class="pt-12">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Profile</h2>
-            <div class="bg-white p-8 rounded-lg shadow-md">
-                <p class="text-lg text-gray-700 mb-4">
-                    Hi there! &#128075; I'm a curious problem solver and lifelong learner &#127793; who thrives at the intersection of technology and business.
-                    As a Business Analyst and Tech Consultant, I love translating complex ideas into clear, actionable strategies that drive results &#128200;.
-                    Whether I'm optimizing workflows, guiding stakeholders through change, or presenting data, I bring a spirit of creativity, collaboration, and continuous improvement to everything I do.
-                    &#128161; Let's connect and explore how I can help turn challenges &#129513; into opportunities &#127793;.
-                </p>
-                <p class="text-lg text-gray-700">
-                    Outside of work, I teach kids coding basics through platforms like &#128241; Roblox &#127918;, fostering creativity and problem-solving in a fun, interactive way! :)
-                </p>
-            </div>
-        </section>
-
-        <hr class="border-gray-200" />
-
-        <section id="analytics" class="pt-12">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Analytics</h2>
-            <p class="text-lg text-gray-700 mb-6 text-center">Explore my capabilities in data analysis and visualization:</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Data Analysis</h3>
-                    <p class="text-gray-600 mb-4">
-                        Skilled in collecting, processing, and performing statistical analysis on large datasets to uncover trends and inform strategic decisions.
-                    </p>
-                    <a href="data-analysis.html" class="mt-auto text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Tableau & Power BI</h3>
-                    <p class="text-gray-600 mb-4">
-                        Experienced in creating interactive dashboards and visualizations to help stakeholders understand complex data stories at a glance.
-                    </p>
-                    <a href="tableau-powerbi.html" class="mt-auto text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">SQL & Python</h3>
-                    <p class="text-gray-600 mb-4">
-                        Proficient in using SQL for database querying and Python for advanced data manipulation, automation, and reporting scripts.
-                    </p>
-                    <a href="sql-python.html" class="mt-auto text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
-                </div>
-            </div>
-        </section>
-
-        <hr class="border-gray-200" />
-
-        <section id="documentation" class="pt-12">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Documentation</h2>
-            <p class="text-lg text-gray-700 mb-6 text-center">See examples of my documentation expertise:</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">BRD & FRD</h3>
-                    <p class="text-gray-600 mb-4">
-                        Expertise in writing comprehensive Business Requirements Documents (BRD) and Functional Requirements Documents (FRD) that accurately capture project scope and objectives.
-                    </p>
-                    <a href="brd-frd.html" class="mt-auto text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">User Stories & Diagrams</h3>
-                    <p class="text-gray-600 mb-4">
-                        Adept at creating detailed user stories and using tools like BPMN and UML to model processes and system interactions clearly.
-                    </p>
-                    <a href="user-stories-diagrams.html" class="mt-auto text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Test Cases</h3>
-                    <p class="text-gray-600 mb-4">
-                        Experienced in developing and executing detailed test cases to ensure new features meet the defined requirements and quality standards.
-                    </p>
-                    <a href="test-cases.html" class="mt-auto text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
-                </div>
-            </div>
-        </section>
-        
-        <hr class="border-gray-200" />
-
-        <section id="projects" class="pt-12">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Projects & Case Studies</h2>
-            <p class="text-lg text-gray-600 mb-8 text-center">Discover a selection of niche projects I've been involved in. These case studies offer a deeper look into my domain knowledge and problem-solving approach within specific technical areas, even for complex subjects.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Capacity Management - GeoSpatial</h3>
-                    <p class="text-gray-600 mb-4 text-sm">
-                        &#128162; Problem: Complex geospatial inventory management.
-                        &#128161; Solution: Led a cross-functional team to conduct user research, gather requirements, and document user stories for a streamlined inventory capacity process. This project affected Sales, Capacity Planning, and ultimately, Customer Satisfaction.
-                    </p>
-                    <p class="text-sm text-gray-500 mt-auto">
-                        &#128220; Tools: Agile, Jira, Confluence, SQL, API testing (Bruno)
-                    </p>
-                    <a href="capacity-management-geospatial.html" class="mt-4 text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Lead/Quote to Cash</h3>
-                    <p class="text-gray-600 mb-4 text-sm">
-                        &#128162; Problem: Integration breakdowns between legacy and NextGen systems in the end-to-end Lead-to-Cash process.
-                        &#128161; Solution: Gathered requirements from various stakeholders. Analyzed existing data sources, created data mapping diagrams, and ensured SQL scripts cleaned, transformed, and migrated data to the new system.
-                    </p>
-                    <p class="text-sm text-gray-500 mt-auto">
-                        &#128220; Tools: SQL, Python, Data Mapping, UAT tracking, Defects tracking, Stakeholder Management
-                    </p>
-                    <a href="lead-quote-to-cash.html" class="mt-4 text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">System / Data Migration</h3>
-                    <p class="text-gray-600 mb-4 text-sm">
-                        &#128162; Problem: Ensuring seamless consumption of NextGen data by critical downstream applications post-migration.
-                        &#128161; Solution: Developed an SQL-based data quality dashboard for post-migration health monitoring and reporting. Documented the new process in a detailed Functional Requirements Document (FRD).
-                    </p>
-                    <p class="text-sm text-gray-500 mt-auto">
-                        &#128220; Tools: FRD, SQL, Data Dashboards, Data Validation
-                    </p>
-                    <a href="system-data-migration.html" class="mt-4 text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
-                </div>
-            </div>
-        </section>
-
-        <hr class="border-gray-200" />
-
-        <section id="experience" class="pt-12">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">Work Experience</h2>
-            <p class="text-lg sm:text-xl text-gray-600 mb-8 text-center">Total Working Experience: 5 Years and counting!</p>
+            </section>
             
-            <div class="space-y-8">
-                <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-green-500">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-xl font-semibold text-gray-900">BA Consultant (ServiceNow) - Operations</h3>
-                        <p class="text-sm text-gray-500">Mar 2025 - PRESENT</p>
-                    </div>
-                    <p class="text-lg text-gray-700 font-medium">Enable, a Fujitsu company</p>
-                    <ul class="list-disc list-inside text-gray-600 mt-4 space-y-2">
-                         <li>Collaborating closely with clients to define and refine requirements for ServiceNow solutions, ensuring alignment with their operational goals.</li>
-                         <li>Designing and documenting functional specifications for ServiceNow implementations, focusing on optimizing IT workflows and service delivery.</li>
-                         <li>Providing expert guidance on ServiceNow capabilities and best practices to enhance client satisfaction and system adoption.</li>
-                         <li>Facilitating workshops and training sessions to empower client teams in leveraging ServiceNow for improved efficiency.</li>
-                    </ul>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-purple-500">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-xl font-semibold text-gray-900">Business Analyst</h3>
-                        <p class="text-sm text-gray-500">Mar 2023 - Mar 2025</p>
-                    </div>
-                    <p class="text-lg text-gray-700 font-medium">Equinix Inc</p>
-                    <p class="text-sm text-gray-600 mt-1">(2 years)</p>
-                      <ul class="list-disc list-inside text-gray-600 mt-4 space-y-2">
-                        <li>Business Requirements & Stakeholder Collaboration: Gather, prioritize, and document business requirements, serving as the key liaison between business teams, IT, and vendors. Ensure alignment of expectations and deliverables, and translate requirements into actionable JIRA tickets for development teams and Confluence for documentation. Crafting user stories for both developers and quality assurance.</li>
-                        <li>System Optimization & Integration & Technical Collaboration: Optimize systems for performance and integration with legacy platforms. Lead data migration to ensure synchronization with minimal user impact. Work with engineering to design solutions, define testing criteria, and support database and system architecture using Kafka, RabbitMQ, and GCP.</li>
-                        <li>Product Development Lifecycle & Key Operational Areas: Fostering communication and stakeholder involvement through consistent updates and refining requirements. Rigorous testing and collaborating with testers to confirm the solution meets expectations and user needs. Providing go-live assistance is key, coordinating readiness and overseeing deployment. Post-launch, a review of implementation gathers feedback and distills lessons for future enhancements.</li>
-                        <li>Data Quality & Migration: Lead data migration initiatives, ensuring data integrity and accuracy across systems. Successfully reduced error rates by 90%, driving significant improvements in data quality and system reliability. Using SQL and Python on a daily basis to analyze data.</li>
-                    </ul>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-purple-500">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-xl font-semibold text-gray-900">Senior Associate Business Analyst</h3>
-                        <p class="text-sm text-gray-500">Mar 2023 - Mar 2025</p>
-                    </div>
-                    <p class="text-lg text-gray-700 font-medium">Equinix Inc</p>
-                    <p class="text-sm text-gray-600 mt-1">(2 years 1 months)</p>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-purple-500">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-xl font-semibold text-gray-900">Associate Business Analyst</h3>
-                        <p class="text-sm text-gray-500">Jan 2022 - Mar 2023</p>
-                    </div>
-                    <p class="text-lg text-gray-700 font-medium">Equinix Inc</p>
-                    <p class="text-sm text-gray-600 mt-1">(1 year 3 months)</p>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-blue-500">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-xl font-semibold text-gray-900">Business Analyst (full time)</h3>
-                        <p class="text-sm text-gray-500">May 2021 - Oct 2021</p>
-                    </div>
-                    <p class="text-lg text-gray-700 font-medium">Infosys Consulting</p>
-                    <p class="text-sm text-gray-600 mt-1">(6 Months)</p>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-purple-500">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-xl font-semibold text-gray-900">Business System Analyst (contract)</h3>
-                        <p class="text-sm text-gray-500">Aug 2020 - May 2021</p>
-                    </div>
-                    <p class="text-lg text-gray-700 font-medium">Equinix Inc</p>
-                    <p class="text-sm text-gray-600 mt-1">(10 months)</p>
-                </div>
-            </div>
-        </section>
+            <hr class="border-gray-200" />
 
-        <hr class="border-gray-200" />
-
-        <section id="skills-certs" class="pt-12">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Skills & Certifications</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="p-6 bg-white rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Business Analyst</h3>
-                    <ul class="list-disc list-inside text-gray-600 space-y-2">
-                        <li>Technical Project Management</li>
-                        <li>Critical & Analytical Thinking</li>
-                        <li>Data Analysis (SQL & Python)</li>
-                        <li>Process Mapping & Modeling (Visio/Miro)</li>
-                        <li>Stakeholder Communication</li>
-                        <li>Documentation and Reporting</li>
-                        <li>Change Management (PROD)</li>
-                        <li>Testing & Validation (SIT & UAT)</li>
-                        <li>Product Vision & Strategy</li>
-                        <li>Backlog Management (Azure DevOps)</li>
-                        <li>User Story Writing</li>
-                        <li>Prioritization & Decision Making</li>
-                        <li>Market and Customer Focus</li>
-                        <li>User-Centered UI/UX</li>
-                        <li>Data-Driven Decision Making</li>
-                        <li>Release Planning & Execution</li>
-                    </ul>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Certifications & Languages</h3>
-                    <ul class="list-disc list-inside text-gray-600 space-y-2">
-                        <li>AWS Certified Cloud Practitioner</li>
-                        <li>Certified Scrum Product Owner (CSPO)</li>
-                        <li class="mt-4 font-semibold">Languages:</li>
-                        <ul class="list-disc list-inside ml-5">
-                            <li>English (Fluent)</li>
-                            <li>Chinese (Fluent)</li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <hr class="border-gray-200" />
-
-        <section id="education" class="pt-12">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Education</h2>
-            <div class="space-y-8">
-                <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-blue-500">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-xl font-semibold text-gray-900">Singapore Management University (SMU)</h3>
-                        <p class="text-sm text-gray-500">2016-2020</p>
-                    </div>
-                    <p class="text-lg text-gray-700 font-medium">School of Information Systems | Bachelor of Science</p>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-blue-500">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-xl font-semibold text-gray-900">Temasek Polytechnic</h3>
-                        <p class="text-sm text-gray-500">2013-2016</p>
-                    </div>
-                    <p class="text-lg text-gray-700 font-medium">School of Business | Diploma with Merit in Leisure & Resort Management</p>
-                </div>
-            </div>
-        </section>
-
-        <hr class="border-gray-200" />
-
-        <section id="contact" class="pt-12">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Contact</h2>
-            <div class="bg-white p-8 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-8">
-                <div class="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="photo_2025-08-02 12.13.31.jpeg" alt="Anicia Gan's casual headshot" class="object-cover w-full h-full">
-                </div>
-                <div class="text-center md:text-left">
-                    <p class="text-lg text-gray-700">
-                        Always open to new ideas, projects, or just a friendly conversation. Feel free to get in touch!
+            <section id="profile" class="pt-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Profile</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <p class="text-lg text-gray-700 mb-4">
+                        Hi there! &#128075; I'm a curious problem solver and lifelong learner &#127793; who thrives at the intersection of technology and business.
+                        As a **Business Analyst** and **Tech Consultant**, I love translating complex ideas into clear, actionable strategies that drive results &#128200;.
+                        Whether I'm optimizing workflows, guiding stakeholders through change, or presenting data, I bring a spirit of creativity, collaboration, and continuous improvement to everything I do.
+                        &#128161; Let's connect and explore how I can help turn challenges &#129513; into opportunities &#127793;.
                     </p>
-                    <div class="mt-6">
-                        <p class="text-gray-600 font-semibold">Get in Touch:</p>
-                        <ul class="list-none space-y-2 text-lg font-medium">
-                            <li><a href="mailto:aniciagan@gmail.com" class="text-blue-600 hover:underline">aniciagan@gmail.com</a></li>
-                            <li><a href="tel:+6581134024" class="text-blue-600 hover:underline">+65 81134024</a></li>
-                            <li><a href="https://www.linkedin.com/in/aniciagan" target="_blank" class="text-blue-600 hover:underline" rel="noopener noreferrer">LinkedIn Profile</a></li>
-                            <li class="text-gray-600">Singapore, Singaporean Citizen</li>
+                    <p class="text-lg text-gray-700">
+                        Outside of work, I teach kids coding basics through platforms like &#128241; Roblox &#127918;, fostering creativity and problem-solving in a fun, interactive way! :)
+                    </p>
+                </div>
+            </section>
+
+            <hr class="border-gray-200" />
+
+            <section id="analytics" class="pt-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Analytics</h2>
+                <p class="text-lg text-gray-700 mb-6 text-center">Explore my capabilities in data analysis and visualization:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Data Analysis</h3>
+                        <p class="text-gray-600 mb-4">
+                            Skilled in collecting, processing, and performing statistical analysis on large datasets to uncover trends and inform strategic decisions.
+                        </p>
+                        <button onclick="showDetailedSection('detailed-data-analysis')" class="mt-auto text-blue-600 hover:underline font-medium">Learn More &rarr;</button>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Tableau & Power BI</h3>
+                        <p class="text-gray-600 mb-4">
+                            Experienced in creating interactive dashboards and visualizations to help stakeholders understand complex data stories at a glance.
+                        </p>
+                        <button onclick="showDetailedSection('detailed-tableau-powerbi')" class="mt-auto text-blue-600 hover:underline font-medium">Learn More &rarr;</button>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">SQL & Python</h3>
+                        <p class="text-gray-600 mb-4">
+                            Proficient in using SQL for database querying and Python for advanced data manipulation, automation, and reporting scripts.
+                        </p>
+                        <button onclick="showDetailedSection('detailed-sql-python')" class="mt-auto text-blue-600 hover:underline font-medium">Learn More &rarr;</button>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-gray-200" />
+
+            <section id="documentation" class="pt-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Documentation</h2>
+                <p class="text-lg text-gray-700 mb-6 text-center">See examples of my documentation expertise:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">BRD & FRD</h3>
+                        <p class="text-gray-600 mb-4">
+                            Expertise in writing comprehensive Business Requirements Documents (BRD) and Functional Requirements Documents (FRD) that accurately capture project scope and objectives.
+                        </p>
+                        <button onclick="showDetailedSection('detailed-brd-frd')" class="mt-auto text-blue-600 hover:underline font-medium">Learn More &rarr;</button>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">User Stories & Diagrams</h3>
+                        <p class="text-gray-600 mb-4">
+                            Adept at creating detailed user stories and using tools like BPMN and UML to model processes and system interactions clearly.
+                        </p>
+                        <button onclick="showDetailedSection('detailed-user-stories-diagrams')" class="mt-auto text-blue-600 hover:underline font-medium">Learn More &rarr;</button>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Test Cases</h3>
+                        <p class="text-gray-600 mb-4">
+                            Experienced in developing and executing detailed test cases to ensure new features meet the defined requirements and quality standards.
+                        </p>
+                        <button onclick="showDetailedSection('detailed-test-cases')" class="mt-auto text-blue-600 hover:underline font-medium">Learn More &rarr;</button>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="border-gray-200" />
+
+            <section id="projects" class="pt-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Projects & Case Studies</h2>
+                <p class="text-lg text-gray-600 mb-8 text-center">Discover a selection of **niche projects I've been involved in**. These case studies offer a deeper look into my **domain knowledge** and problem-solving approach within specific technical areas, even for complex subjects.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Capacity Management - GeoSpatial</h3>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            &#128162; **Problem:** Complex geospatial inventory management.
+                            &#128161; **Solution:** Led a cross-functional team to conduct user research, gather requirements, and document user stories for a streamlined inventory capacity process. This project affected Sales, Capacity Planning, and ultimately, Customer Satisfaction.
+                        </p>
+                        <p class="text-sm text-gray-500 mt-auto">
+                            &#128220; **Tools:** Agile, Jira, Confluence, SQL, API testing (Bruno)
+                        </p>
+                        <button onclick="showDetailedSection('detailed-capacity-management-geospatial')" class="mt-4 text-blue-600 hover:underline font-medium">Learn More &rarr;</button>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Lead/Quote to Cash</h3>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            &#128162; **Problem:** Integration breakdowns between legacy and NextGen systems in the end-to-end Lead-to-Cash process.
+                            &#128161; **Solution:** Gathered requirements from various stakeholders. Analyzed existing data sources, created data mapping diagrams, and ensured SQL scripts cleaned, transformed, and migrated data to the new system.
+                        </p>
+                        <p class="text-sm text-gray-500 mt-auto">
+                            &#128220; **Tools:** SQL, Python, Data Mapping, UAT tracking, Defects tracking, Stakeholder Management
+                        </p>
+                        <button onclick="showDetailedSection('detailed-lead-quote-to-cash')" class="mt-4 text-blue-600 hover:underline font-medium">Learn More &rarr;</button>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md flex flex-col items-start">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">System / Data Migration</h3>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            &#128162; **Problem:** Ensuring seamless consumption of NextGen data by critical downstream applications post-migration.
+                            &#128161; **Solution:** Developed an SQL-based data quality dashboard for post-migration health monitoring and reporting. Documented the new process in a detailed Functional Requirements Document (FRD).
+                        </p>
+                        <p class="text-sm text-gray-500 mt-auto">
+                            &#128220; **Tools:** FRD, SQL, Data Dashboards, Data Validation
+                        </p>
+                        <button onclick="showDetailedSection('detailed-system-data-migration')" class="mt-4 text-blue-600 hover:underline font-medium">Learn More &rarr;</button>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-gray-200" />
+
+            <section id="experience" class="pt-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">Work Experience</h2>
+                <p class="text-lg sm:text-xl text-gray-600 mb-8 text-center">Total Working Experience: 5 Years and counting!</p>
+                
+                <div class="space-y-8">
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-green-500">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-semibold text-gray-900">BA Consultant (ServiceNow) - Operations</h3>
+                            <p class="text-sm text-gray-500">Mar 2025 - PRESENT</p>
+                        </div>
+                        <p class="text-lg text-gray-700 font-medium">Enable, a Fujitsu company</p>
+                        <ul class="list-disc list-inside text-gray-600 mt-4 space-y-2">
+                            <li>Collaborating closely with clients to define and refine requirements for ServiceNow solutions, ensuring alignment with their operational goals.</li>
+                            <li>Designing and documenting functional specifications for ServiceNow implementations, focusing on optimizing IT workflows and service delivery.</li>
+                            <li>Providing expert guidance on ServiceNow capabilities and best practices to enhance client satisfaction and system adoption.</li>
+                            <li>Facilitating workshops and training sessions to empower client teams in leveraging ServiceNow for improved efficiency.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-purple-500">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-semibold text-gray-900">Business Analyst</h3>
+                            <p class="text-sm text-gray-500">Mar 2023 - Mar 2025</p>
+                        </div>
+                        <p class="text-lg text-gray-700 font-medium">Equinix Inc</p>
+                        <p class="text-sm text-gray-600 mt-1">(2 years)</p>
+                        <ul class="list-disc list-inside text-gray-600 mt-4 space-y-2">
+                            <li>**Business Requirements & Stakeholder Collaboration:** Gather, prioritize, and document business requirements, serving as the key liaison between business teams, IT, and vendors. Ensure alignment of expectations and deliverables, and translate requirements into actionable JIRA tickets for development teams and Confluence for documentation. Crafting user stories for both developers and quality assurance.</li>
+                            <li>**System Optimization & Integration & Technical Collaboration:** Optimize systems for performance and integration with legacy platforms. Lead data migration to ensure synchronization with minimal user impact. Work with engineering to design solutions, define testing criteria, and support database and system architecture using Kafka, RabbitMQ, and GCP.</li>
+                            <li>**Product Development Lifecycle & Key Operational Areas:** Fostering communication and stakeholder involvement through consistent updates and refining requirements. Rigorous testing and collaborating with testers to confirm the solution meets expectations and user needs. Providing go-live assistance is key, coordinating readiness and overseeing deployment. Post-launch, a review of implementation gathers feedback and distills lessons for future enhancements.</li>
+                            <li>**Data Quality & Migration:** Lead data migration initiatives, ensuring data integrity and accuracy across systems. Successfully reduced error rates by 90%, driving significant improvements in data quality and system reliability. Using SQL and Python on a daily basis to analyze data.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-purple-500">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-semibold text-gray-900">Senior Associate Business Analyst</h3>
+                            <p class="text-sm text-gray-500">Mar 2023 - Mar 2025</p>
+                        </div>
+                        <p class="text-lg text-gray-700 font-medium">Equinix Inc</p>
+                        <p class="text-sm text-gray-600 mt-1">(2 years 1 months)</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-purple-500">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-semibold text-gray-900">Associate Business Analyst</h3>
+                            <p class="text-sm text-gray-500">Jan 2022 - Mar 2023</p>
+                        </div>
+                        <p class="text-lg text-gray-700 font-medium">Equinix Inc</p>
+                        <p class="text-sm text-gray-600 mt-1">(1 year 3 months)</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-blue-500">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-semibold text-gray-900">Business Analyst (full time)</h3>
+                            <p class="text-sm text-gray-500">May 2021 - Oct 2021</p>
+                        </div>
+                        <p class="text-lg text-gray-700 font-medium">Infosys Consulting</p>
+                        <p class="text-sm text-gray-600 mt-1">(6 Months)</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-purple-500">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-semibold text-gray-900">Business System Analyst (contract)</h3>
+                            <p class="text-sm text-gray-500">Aug 2020 - May 2021</p>
+                        </div>
+                        <p class="text-lg text-gray-700 font-medium">Equinix Inc</p>
+                        <p class="text-sm text-gray-600 mt-1">(10 months)</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-gray-200" />
+
+            <section id="skills-certs" class="pt-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Skills & Certifications</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Business Analyst</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Technical Project Management</li>
+                            <li>Critical & Analytical Thinking</li>
+                            <li>Data Analysis (SQL & Python)</li>
+                            <li>Process Mapping & Modeling (Visio/Miro)</li>
+                            <li>Stakeholder Communication</li>
+                            <li>Documentation and Reporting</li>
+                            <li>Change Management (PROD)</li>
+                            <li>Testing & Validation (SIT & UAT)</li>
+                            <li>Product Vision & Strategy</li>
+                            <li>Backlog Management (Azure DevOps)</li>
+                            <li>User Story Writing</li>
+                            <li>Prioritization & Decision Making</li>
+                            <li>Market and Customer Focus</li>
+                            <li>User-Centered UI/UX</li>
+                            <li>Data-Driven Decision Making</li>
+                            <li>Release Planning & Execution</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Certifications & Languages</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>AWS Certified Cloud Practitioner</li>
+                            <li>Certified Scrum Product Owner (CSPO)</li>
+                            <li class="mt-4 font-semibold">Languages:</li>
+                            <ul class="list-disc list-inside ml-5">
+                                <li>English (Fluent)</li>
+                                <li>Chinese (Fluent)</li>
+                            </ul>
                         </ul>
                     </div>
                 </div>
+            </section>
+
+            <hr class="border-gray-200" />
+
+            <section id="education" class="pt-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Education</h2>
+                <div class="space-y-8">
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-blue-500">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-semibold text-gray-900">Singapore Management University (SMU)</h3>
+                            <p class="text-sm text-gray-500">2016-2020</p>
+                        </div>
+                        <p class="text-lg text-gray-700 font-medium">School of Information Systems | Bachelor of Science</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-blue-500">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-semibold text-gray-900">Temasek Polytechnic</h3>
+                            <p class="text-sm text-gray-500">2013-2016</p>
+                        </div>
+                        <p class="text-lg text-gray-700 font-medium">School of Business | Diploma with Merit in Leisure & Resort Management</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-gray-200" />
+
+            <section id="contact" class="pt-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Contact</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="photo_2025-08-02 12.13.31.jpeg" alt="Anicia Gan's casual headshot" class="object-cover w-full h-full">
+                    </div>
+                    <div class="text-center md:text-left">
+                        <p class="text-lg text-gray-700">
+                            Always open to new ideas, projects, or just a friendly conversation. Feel free to get in touch!
+                        </p>
+                        <div class="mt-6">
+                            <p class="text-gray-600 font-semibold">Get in Touch:</p>
+                            <ul class="list-none space-y-2 text-lg font-medium">
+                                <li><a href="mailto:aniciagan@gmail.com" class="text-blue-600 hover:underline">aniciagan@gmail.com</a></li>
+                                <li><a href="tel:+6581134024" class="text-blue-600 hover:underline">+65 81134024</a></li>
+                                <li><a href="https://www.linkedin.com/in/aniciagan" target="_blank" class="text-blue-600 hover:underline" rel="noopener noreferrer">LinkedIn Profile</a></li>
+                                <li class="text-gray-600">Singapore, Singaporean Citizen</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div> <section id="detailed-data-analysis" class="detailed-section py-12">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h1 class="text-4xl font-bold text-gray-900 mb-6">Detailed: Data Analysis Expertise</h1>
+                <p class="text-lg text-gray-700 mb-4">
+                    In my roles, I've consistently applied strong data analysis skills to extract actionable insights from complex datasets. My process involves:
+                </p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                    <li>**Data Collection & Cleaning:** Sourcing data from various systems (SQL databases, APIs, spreadsheets) and meticulously cleaning it to ensure accuracy and consistency.</li>
+                    <li>**Statistical Analysis:** Applying statistical methods to identify trends, correlations, and anomalies, helping to understand underlying business performance.</li>
+                    <li>**Data Modeling:** Designing and implementing data models that support robust reporting and predictive analytics.</li>
+                    <li>**Reporting & Interpretation:** Translating complex data findings into clear, concise reports and presentations for both technical and non-technical stakeholders.</li>
+                    <li>**Tools:** Proficient in SQL for querying databases, Python (Pandas, NumPy, Matplotlib, Seaborn) for advanced analysis and visualization, and Excel for initial data exploration.</li>
+                </ul>
+                <p class="text-lg text-gray-700">
+                    My objective is to empower decision-makers with reliable, data-driven insights that lead to measurable business improvements.
+                </p>
+                <button onclick="hideDetailedSection()" class="mt-8 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
+                    &larr; Return to Main Page
+                </button>
             </div>
         </section>
-        
-    </main>
+
+        <section id="detailed-tableau-powerbi" class="detailed-section py-12">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h1 class="text-4xl font-bold text-gray-900 mb-6">Detailed: Tableau & Power BI Expertise</h1>
+                <p class="text-lg text-gray-700 mb-4">
+                    I leverage leading business intelligence tools to transform raw data into intuitive and interactive dashboards:
+                </p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                    <li>**Dashboard Design:** Creating visually appealing and highly functional dashboards in Tableau and Power BI that cater to specific business questions and user needs.</li>
+                    <li>**Data Connection & Transformation:** Connecting to various data sources, including databases, cloud platforms, and flat files, and performing necessary data transformations (ETL) to ensure data readiness.</li>
+                    <li>**Interactive Visualizations:** Developing a range of visualizations, from bar charts and line graphs to geographic maps and custom charts, to effectively communicate data stories.</li>
+                    <li>**Performance Optimization:** Ensuring dashboards are optimized for performance and scalability, handling large datasets efficiently.</li>
+                    <li>**User Training & Adoption:** Providing training and support to end-users to maximize the utility and adoption of reporting tools.</li>
+                </ul>
+                <p class="text-lg text-gray-700">
+                    My expertise in Tableau and Power BI ensures that complex data is made accessible and actionable for all stakeholders.
+                </p>
+                <button onclick="hideDetailedSection()" class="mt-8 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
+                    &larr; Return to Main Page
+                </button>
+            </div>
+        </section>
+
+        <section id="detailed-sql-python" class="detailed-section py-12">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h1 class="text-4xl font-bold text-gray-900 mb-6">Detailed: SQL & Python Proficiency</h1>
+                <p class="text-lg text-gray-700 mb-4">
+                    My technical foundation in SQL and Python allows me to perform deep dives into data and automate analytical processes:
+                </p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                    <li>**SQL for Data Querying & Manipulation:** Writing complex SQL queries for data extraction, aggregation, and manipulation from relational databases. Proficient in joins, subqueries, window functions, and database schema understanding.</li>
+                    <li>**Python for Data Analysis:** Using Python libraries such as Pandas for data cleaning, transformation, and analysis; NumPy for numerical operations; and Matplotlib/Seaborn for advanced data visualization.</li>
+                    <li>**Scripting & Automation:** Developing Python scripts to automate routine data tasks, generate reports, and build custom analytical tools, significantly reducing manual effort and improving efficiency.</li>
+                    <li>**API Interactions:** Leveraging Python to interact with various APIs for data retrieval and integration, enhancing data collection capabilities.</li>
+                </ul>
+                <p class="text-lg text-gray-700">
+                    This dual proficiency ensures I can not only extract and analyze data but also build robust, scalable solutions for ongoing data needs.
+                </p>
+                <button onclick="hideDetailedSection()" class="mt-8 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
+                    &larr; Return to Main Page
+                </button>
+            </div>
+        </section>
+
+        <section id="detailed-brd-frd" class="detailed-section py-12">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h1 class="text-4xl font-bold text-gray-900 mb-6">Detailed: BRD & FRD Creation</h1>
+                <p class="text-lg text-gray-700 mb-4">
+                    Crafting clear, concise, and comprehensive documentation is a cornerstone of my work as a Business Analyst. I specialize in developing:
+                </p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                    <li>**Business Requirements Documents (BRD):** These capture the "what" and "why" of a project from a business perspective, outlining strategic goals, high-level user needs, and success metrics. I ensure BRDs are aligned with stakeholder expectations and provide a solid foundation for all subsequent project phases.</li>
+                    <li>**Functional Requirements Documents (FRD):** Moving from business needs to technical specifications, FRDs detail the "how" a system will perform. This includes precise descriptions of system functionalities, user interfaces, data flows, and integrations. I focus on making FRDs unambiguous, enabling development teams to build exactly what's required.</li>
+                    <li>**Key Aspects:** I incorporate use cases, process flows, data dictionaries, and acceptance criteria into my documentation, ensuring all aspects of the solution are clearly defined.</li>
+                </ul>
+                <p class="text-lg text-gray-700">
+                    My goal is to minimize ambiguity and ensure a shared understanding across business, development, and QA teams, leading to efficient project delivery.
+                </p>
+                <button onclick="hideDetailedSection()" class="mt-8 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
+                    &larr; Return to Main Page
+                </button>
+            </div>
+        </section>
+
+        <section id="detailed-user-stories-diagrams" class="detailed-section py-12">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h1 class="text-4xl font-bold text-gray-900 mb-6">Detailed: User Stories & Diagrams</h1>
+                <p class="text-lg text-gray-700 mb-4">
+                    Effective communication of requirements is critical. I excel at translating complex ideas into clear and actionable formats:
+                </p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                    <li>**User Story Creation:** Writing concise and comprehensive user stories (As a [user], I want to [action] so that [benefit]) that clearly define features from the end-user's perspective.</li>
+                    <li>**Acceptance Criteria:** Developing detailed acceptance criteria for each user story, ensuring clarity for development and quality assurance teams.</li>
+                    <li>**Process Modeling (BPMN):** Using Business Process Model and Notation (BPMN) to graphically represent business processes, illustrating workflows, decision points, and actors.</li>
+                    <li>**System Diagrams (UML):** Creating Unified Modeling Language (UML) diagrams such as Use Case Diagrams, Activity Diagrams, and Sequence Diagrams to visualize system interactions and logic.</li>
+                </ul>
+                <p class="text-lg text-gray-700">
+                    These visual and textual tools ensure that all team members have a consistent understanding of the system's intended behavior and design.
+                </p>
+                <button onclick="hideDetailedSection()" class="mt-8 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
+                    &larr; Return to Main Page
+                </button>
+            </div>
+        </section>
+
+        <section id="detailed-test-cases" class="detailed-section py-12">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h1 class="text-4xl font-bold text-gray-900 mb-6">Detailed: Test Cases Development</h1>
+                <p class="text-lg text-gray-700 mb-4">
+                    As a Business Analyst, I play a crucial role in ensuring the quality and successful implementation of solutions through rigorous testing:
+                </p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                    <li>**Test Case Design:** Developing comprehensive test cases based on business and functional requirements, covering various scenarios, edge cases, and user flows.</li>
+                    <li>**Test Execution:** Executing System Integration Testing (SIT) and supporting User Acceptance Testing (UAT) to validate that the developed solution meets all defined criteria.</li>
+                    <li>**Defect Management:** Documenting, tracking, and prioritizing defects using tools like Jira, and collaborating with development teams to ensure timely resolution.</li>
+                    <li>**Traceability Matrix:** Maintaining traceability between requirements, test cases, and defects to ensure full coverage and accountability throughout the development lifecycle.</li>
+                </ul>
+                <p class="text-lg text-gray-700">
+                    My focus on meticulous testing helps to deliver high-quality products that align with business objectives and user expectations.
+                </p>
+                <button onclick="hideDetailedSection()" class="mt-8 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
+                    &larr; Return to Main Page
+                </button>
+            </div>
+        </section>
+
+        <section id="detailed-capacity-management-geospatial" class="detailed-section py-12">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h1 class="text-4xl font-bold text-gray-900 mb-6">Detailed Project: Capacity Management - GeoSpatial</h1>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Problem Statement:</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    Our organization faced significant challenges in managing geospatial inventory, leading to inefficiencies in capacity planning, inaccurate sales commitments, and ultimately, frustrated customers. The existing manual processes were prone to errors and lacked real-time visibility into available resources across different geographic locations.
+                </p>
+
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Solution & My Role:</h2>
+                <p class="text-lg text-gray-700 mb-4">
+                    I led a cross-functional team, serving as the primary Business Analyst, to streamline the entire inventory capacity process. My responsibilities included:
+                </p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                    <li>**User Research & Stakeholder Interviews:** Conducted in-depth interviews with various personas, including sales teams, capacity planners, operations, and customer service, to understand their pain points, workflows, and desired outcomes.</li>
+                    <li>**Requirements Gathering:** Translated business needs into detailed **user stories** and functional requirements, ensuring comprehensive coverage of all new system capabilities.</li>
+                    <li>**Process Mapping:** Utilized tools like Visio and Miro to map existing and future-state geospatial inventory processes, identifying bottlenecks and opportunities for automation.</li>
+                    <li>**Documentation:** Maintained detailed documentation in **Confluence**, including system specifications, data flows, and integration points with other platforms.</li>
+                    <li>**API Testing:** Performed hands-on **API testing using Bruno** (or Postman) to validate data exchange and system interactions, ensuring seamless integration between components.</li>
+                    <li>**Data Analysis & Validation:** Used **SQL** to query relevant databases, validate data integrity during transitions, and assist in setting up initial data for the new system.</li>
+                    <li>**Agile Collaboration:** Worked closely within an Agile framework, participating in sprint planning, daily stand-ups, and retrospectives to ensure continuous delivery and adaptation.</li>
+                </ul>
+
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Impact:</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    This project significantly improved the accuracy and efficiency of geospatial capacity management. It empowered the sales team with real-time inventory visibility, optimized capacity utilization, and led to a better customer experience by reducing order fulfillment delays and errors.
+                </p>
+
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tools Used:</h2>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>**Project Management:** Agile, Jira</li>
+                    <li>**Documentation:** Confluence</li>
+                    <li>**Data:** SQL</li>
+                    <li>**API Testing:** Bruno</li>
+                    <li>**Process Modeling:** Visio, Miro</li>
+                </ul>
+                <button onclick="hideDetailedSection()" class="mt-8 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
+                    &larr; Return to Main Page
+                </button>
+            </div>
+        </section>
+
+        <section id="detailed-lead-quote-to-cash" class="detailed-section py-12">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h1 class="text-4xl font-bold text-gray-900 mb-6">Detailed Project: Lead/Quote to Cash</h1>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Problem Statement:</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    Our Lead-to-Cash process suffered from integration breakdowns between our legacy CRM and billing systems and the new NextGen platforms. This resulted in data inconsistencies, manual workarounds, delayed invoicing, and a fragmented customer journey from initial lead to final payment.
+                </p>
+
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Solution & My Role:</h2>
+                <p class="text-lg text-gray-700 mb-4">
+                    As a Business Analyst, I was instrumental in bridging the gap between existing processes and the integrated solution:
+                </p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                    <li>**Requirements Gathering:** Conducted extensive workshops and interviews with sales, finance, operations, and IT teams to gather comprehensive requirements for the integrated Lead-to-Cash process.</li>
+                    <li>**Data Analysis & Mapping:** Performed in-depth analysis of existing data structures and created detailed **data mapping diagrams** to define how data would flow and transform between legacy and NextGen systems.</li>
+                    <li>**SQL & Python for Data Handling:** Collaborated with developers to ensure **SQL scripts** were robust for data cleaning, transformation, and migration. Used **Python** for data validation and pre-processing tasks.</li>
+                    <li>**UAT & Defects Tracking:** Managed User Acceptance Testing (UAT) cycles, developed test cases, and tracked defects rigorously in Jira, ensuring all issues were resolved before deployment.</li>
+                    <li>**Stakeholder Management:** Maintained strong communication with all stakeholders, managing expectations, resolving conflicts, and ensuring alignment throughout the project lifecycle.</li>
+                    <li>**Process Optimization:** Identified areas for process improvement within the Lead-to-Cash flow, recommending and documenting changes to enhance efficiency and reduce manual touchpoints.</li>
+                </ul>
+
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Impact:</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    The successful integration resulted in a significant reduction in data discrepancies, accelerated the quote-to-invoice cycle, improved revenue recognition accuracy, and provided a seamless experience for both internal users and external customers.
+                </p>
+
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tools Used:</h2>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>**Data:** SQL, Python, Data Mapping Tools</li>
+                    <li>**Project Management:** Jira, Confluence</li>
+                    <li>**Testing:** UAT Tracking, Defects Tracking</li>
+                    <li>**Collaboration:** Stakeholder Management techniques</li>
+                </ul>
+                <button onclick="hideDetailedSection()" class="mt-8 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
+                    &larr; Return to Main Page
+                </button>
+            </div>
+        </section>
+
+        <section id="detailed-system-data-migration" class="detailed-section py-12">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h1 class="text-4xl font-bold text-gray-900 mb-6">Detailed Project: System / Data Migration</h1>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Problem Statement:</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    Migrating from legacy systems to a new NextGen platform posed a critical challenge: ensuring that all downstream applications could seamlessly consume the new data without disruption. Data integrity, compatibility, and real-time synchronization were paramount.
+                </p>
+
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Solution & My Role:</h2>
+                <p class="text-lg text-gray-700 mb-4">
+                    My role focused on guaranteeing the smooth transition and ongoing reliability of data post-migration:
+                </p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                    <li>**Data Quality Assurance:** Defined key data quality metrics and worked with data engineers to implement validation rules during the migration process.</li>
+                    <li>**SQL-based Data Quality Dashboard:** Designed and developed an **SQL-based data quality dashboard** to monitor the health and consistency of data in the new system post-migration. This provided real-time insights into data accuracy and completeness.</li>
+                    <li>**Functional Requirements Document (FRD):** Authored a detailed **Functional Requirements Document (FRD)** specifically for the data consumption process, outlining how downstream systems would access, interpret, and utilize the migrated data from the NextGen platform.</li>
+                    <li>**Data Validation:** Performed extensive **data validation** checks before, during, and after migration to identify and reconcile discrepancies, ensuring data integrity across all integrated systems.</li>
+                    <li>**Collaboration with Integration Teams:** Collaborated closely with integration developers to ensure APIs and data pipelines supported the defined data consumption requirements.</li>
+                </ul>
+
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Impact:</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    The project ensured a high degree of data integrity and minimized disruption to business operations post-migration. The data quality dashboard became an essential tool for proactive monitoring, enabling quick identification and resolution of any data-related issues, thus maintaining operational continuity and data reliability for critical downstream applications.
+                </p>
+
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tools Used:</h2>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>**Documentation:** FRD (Functional Requirements Document)</li>
+                    <li>**Data:** SQL, Data Dashboards, Data Validation techniques</li>
+                </ul>
+                <button onclick="hideDetailedSection()" class="mt-8 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200">
+                    &larr; Return to Main Page
+                </button>
+            </div>
+        </section>
+
+        </main>
 
     <footer class="bg-gray-800 text-white text-center p-6 mt-12">
         <p>&copy; 2025 Anicia Gan's Portfolio. All rights reserved.</p>
@@ -354,24 +601,47 @@
     <script>
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-link');
+        const mainContent = document.getElementById('main-content');
+        const detailedSections = document.querySelectorAll('.detailed-section');
 
+        // Function to show a specific detailed section and hide main content
+        function showDetailedSection(sectionId) {
+            mainContent.style.display = 'none'; // Hide the main portfolio content
+            detailedSections.forEach(section => {
+                section.style.display = 'none'; // Hide all detailed sections first
+            });
+            document.getElementById(sectionId).style.display = 'block'; // Show the requested detailed section
+            window.scrollTo(0, 0); // Scroll to the top of the page
+        }
+
+        // Function to hide all detailed sections and show main content
+        function hideDetailedSection() {
+            detailedSections.forEach(section => {
+                section.style.display = 'none';
+            });
+            mainContent.style.display = 'block'; // Show the main portfolio content
+            window.scrollTo(0, 0); // Scroll to the top of the page (or to the analytics/documentation/projects section)
+        }
+
+        // Navigation active link logic for main sections
         window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100; // Adjust offset for sticky header
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-                    current = section.getAttribute('id');
-                }
-            });
+            if (mainContent.style.display !== 'none') { // Only run if main content is visible
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100; // Adjust offset for sticky header
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
 
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                // The condition for 'home' needs to be exact to avoid conflict with other sections containing 'home' in their ID.
-                if (link.href.includes(current) || (current === 'home' && link.href.includes('index.html#home'))) {
-                    link.classList.add('active');
-                }
-            });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.href.includes(current) || (current === 'home' && link.href.includes('index.html#home'))) {
+                        link.classList.add('active');
+                    }
+                });
+            }
         });
 
         // Ensure the active class is set correctly on page load for the 'home' section if at the top
