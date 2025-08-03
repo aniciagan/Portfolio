@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anicia Gan's Portfolio - Test Cases</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+        .nav-link.active {
+            border-bottom: 2px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600 mb-4 sm:mb-0">
+                <a href="index.html" class="hover:text-blue-800">Anicia Gan</a>
+            </div>
+            <div class="flex flex-wrap justify-center sm:justify-end gap-x-6 gap-y-2">
+                <a href="index.html#documentation" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-1">Documentation Overview</a>
+                <a href="brd-frd.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-1">BRD & FRD</a>
+                <a href="user-stories-diagrams.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-1">User Stories & Diagrams</a>
+                <a href="test-cases.html" class="nav-link text-blue-600 font-medium transition-colors duration-200 py-1 active">Test Cases</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section id="test-cases" class="pt-12">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-8">Test Cases</h1>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <p class="text-lg text-gray-700">
+                    Experienced in developing and executing detailed test cases to ensure new features meet the defined requirements and quality standards.
+                </p>
+                <div class="mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Designing Comprehensive Test Cases</h3>
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-inner">
+                        <p class="text-gray-700 mb-4">
+                            As a Business Analyst, my role in testing involves ensuring that the developed solution aligns precisely with the business and functional requirements. I focus on creating **clear, concise, and comprehensive test cases** that cover various scenarios, including:
+                        </p>
+                        <ul class="list-disc list-inside ml-4 space-y-2">
+                            <li>**Positive Test Cases:** Verifying that the system behaves as expected under normal, valid conditions.</li>
+                            <li>**Negative Test Cases:** Ensuring the system handles invalid inputs or unexpected scenarios gracefully, displaying appropriate error messages.</li>
+                            <li>**Boundary Value Analysis:** Testing at the limits of valid input ranges.</li>
+                            <li>**Equivalence Partitioning:** Grouping inputs into classes where the system is expected to behave similarly.</li>
+                            <li>**Integration Testing:** Verifying interactions between different modules or systems.</li>
+                            <li>**User Acceptance Testing (UAT) Support:** Guiding business users through UAT, clarifying requirements, and logging/tracking defects.</li>
+                        </ul>
+                        <p class="text-gray-700 mt-4 font-semibold">Example Test Case Structure:</p>
+                        <div class="bg-white p-4 rounded border border-gray-300">
+                            <table class="min-w-full text-sm text-gray-700">
+                                <thead>
+                                    <tr class="bg-gray-200">
+                                        <th class="px-4 py-2 text-left">Test Case ID</th>
+                                        <th class="px-4 py-2 text-left">Requirement ID(s)</th>
+                                        <th class="px-4 py-2 text-left">Test Case Name</th>
+                                        <th class="px-4 py-2 text-left">Pre-conditions</th>
+                                        <th class="px-4 py-2 text-left">Steps</th>
+                                        <th class="px-4 py-2 text-left">Expected Result</th>
+                                        <th class="px-4 py-2 text-left">Status</th>
+                                        <th class="px-4 py-2 text-left">Notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border px-4 py-2">TC_LOGIN_001</td>
+                                        <td class="border px-4 py-2">FR_AUTH_001</td>
+                                        <td class="border px-4 py-2">Successful Login with Valid Credentials</td>
+                                        <td class="border px-4 py-2">User account exists and is active.</td>
+                                        <td class="border px-4 py-2">
+                                            1. Navigate to Login Page.<br>
+                                            2. Enter valid username.<br>
+                                            3. Enter valid password.<br>
+                                            4. Click "Login" button.
+                                        </td>
+                                        <td class="border px-4 py-2">User is successfully logged in and redirected to the Dashboard.</td>
+                                        <td class="border px-4 py-2"></td>
+                                        <td class="border px-4 py-2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border px-4 py-2">TC_LOGIN_002</td>
+                                        <td class="border px-4 py-2">FR_AUTH_001</td>
+                                        <td class="border px-4 py-2">Failed Login with Invalid Password</td>
+                                        <td class="border px-4 py-2">User account exists and is active.</td>
+                                        <td class="border px-4 py-2">
+                                            1. Navigate to Login Page.<br>
+                                            2. Enter valid username.<br>
+                                            3. Enter invalid password.<br>
+                                            4. Click "Login" button.
+                                        </td>
+                                        <td class="border px-4 py-2">System displays error message: "Invalid username or password." User remains on the login page.</td>
+                                        <td class="border px-4 py-2"></td>
+                                        <td class="border px-4 py-2"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-gray-700 mt-4">
+                            My goal is to facilitate thorough testing, ensuring high-quality software delivery and a seamless user experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-6 mt-12">
+        <p>&copy; 2025 Anicia Gan's Portfolio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
