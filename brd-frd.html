@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anicia Gan's Portfolio - BRD & FRD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+        .nav-link.active {
+            border-bottom: 2px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600 mb-4 sm:mb-0">
+                <a href="index.html" class="hover:text-blue-800">Anicia Gan</a>
+            </div>
+            <div class="flex flex-wrap justify-center sm:justify-end gap-x-6 gap-y-2">
+                <a href="index.html#documentation" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-1">Documentation Overview</a>
+                <a href="brd-frd.html" class="nav-link text-blue-600 font-medium transition-colors duration-200 py-1 active">BRD & FRD</a>
+                <a href="user-stories-diagrams.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-1">User Stories & Diagrams</a>
+                <a href="test-cases.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-1">Test Cases</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section id="brd-frd" class="pt-12">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-8">Business & Functional Requirements Documents (BRD & FRD)</h1>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <p class="text-lg text-gray-700">
+                    Expertise in writing comprehensive Business Requirements Documents (BRD) and Functional Requirements Documents (FRD) that accurately capture project scope and objectives.
+                </p>
+                <div class="mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Approach to BRD & FRD Development</h3>
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-inner">
+                        <p class="text-gray-700 mb-4">
+                            My process for developing robust requirements documents involves:
+                        </p>
+                        <ul class="list-disc list-inside ml-4 space-y-2">
+                            <li>**Stakeholder Workshops:** Facilitating sessions with business users, product owners, and technical teams to elicit and clarify needs.</li>
+                            <li>**Scope Definition:** Clearly defining what is in and out of scope for the project, establishing boundaries.</li>
+                            <li>**Business Goals & Objectives:** Documenting the overarching business problems and the desired outcomes of the solution.</li>
+                            <li>**Use Cases & Scenarios:** Describing how users will interact with the system to achieve specific goals, often including pre-conditions and post-conditions.</li>
+                            <li>**Functional Requirements:** Detailing specific system behaviors, inputs, outputs, and data processing rules (e.g., "The system shall allow users to upload files up to 10MB in PDF format").</li>
+                            <li>**Non-Functional Requirements:** Addressing aspects like performance, security, usability, and scalability.</li>
+                            <li>**Data Requirements:** Specifying data entities, attributes, relationships, and data quality standards.</li>
+                            <li>**User Interface (UI) Requirements:** Describing screen layouts, navigation, and user interactions (often supplemented with wireframes).</li>
+                            <li>**Review Cycles:** Conducting iterative reviews with all relevant stakeholders to ensure accuracy, completeness, and consensus.</li>
+                            <li>**Traceability Matrix:** Maintaining traceability between requirements, design, development, and testing to ensure all needs are met.</li>
+                        </ul>
+                        <p class="text-gray-700 mt-4">
+                            These documents serve as foundational blueprints, guiding development, informing testing strategies, and ensuring alignment across all project phases.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-6 mt-12">
+        <p>&copy; 2025 Anicia Gan's Portfolio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
