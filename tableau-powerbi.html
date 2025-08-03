@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anicia Gan's Portfolio - Tableau & Power BI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+        .nav-link.active {
+            border-bottom: 2px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600 mb-4 sm:mb-0">
+                <a href="index.html" class="hover:text-blue-800">Anicia Gan</a>
+            </div>
+            <div class="flex flex-wrap justify-center sm:justify-end gap-x-6 gap-y-2">
+                <a href="index.html#analytics" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-1">Analytics Overview</a>
+                <a href="data-analysis.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-1">Data Analysis</a>
+                <a href="tableau-powerbi.html" class="nav-link text-blue-600 font-medium transition-colors duration-200 py-1 active">Tableau & Power BI</a>
+                <a href="sql-python.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-1">SQL & Python</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section id="tableau-powerbi" class="pt-12">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-8">Tableau & Power BI</h1>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <p class="text-lg text-gray-700">
+                    Experienced in creating interactive dashboards and visualizations to help stakeholders understand complex data stories at a glance.
+                </p>
+                <div class="mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Dashboard Development Example</h3>
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-inner">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Sales Performance Dashboard (Tableau)</h4>
+                        <p class="text-gray-700 mb-4">
+                            **Objective:** To provide sales managers with a real-time, interactive view of sales performance, identifying trends, top performers, and areas for improvement.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            **Process:**
+                            <ul class="list-disc list-inside ml-4 space-y-2">
+                                <li>Connected Tableau to various sales data sources (CRM, transactional databases).</li>
+                                <li>Cleaned and prepared data, creating calculated fields for key metrics like sales growth, average deal size, and conversion rates.</li>
+                                <li>Designed and built multiple interactive visualizations, including:
+                                    <ul class="list-circle list-inside ml-6">
+                                        <li>Time-series charts for sales trends (daily, weekly, monthly).</li>
+                                        <li>Bar charts for sales performance by region, product, and sales representative.</li>
+                                        <li>Geospatial maps to visualize sales distribution.</li>
+                                        <li>Key performance indicators (KPIs) with historical comparisons.</li>
+                                    </ul>
+                                </li>
+                                <li>Implemented filters and parameters to allow users to slice and dice the data (e.g., by date range, product category, sales team).</li>
+                                <li>Published the dashboard to Tableau Server for secure access and scheduled data refreshes.</li>
+                            </ul>
+                        </p>
+                        <p class="text-gray-700">
+                            **Outcome:** Sales managers reported a 20% increase in efficiency in identifying underperforming regions and reps, enabling faster intervention and more informed strategic planning. The dashboard became a central tool for weekly sales review meetings.
+                        </p>
+                        <p class="text-sm text-gray-500 mt-4">
+                            *Note: If you have a public Tableau Public or Power BI link, you could embed it or link to it here.*
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-6 mt-12">
+        <p>&copy; 2025 Anicia Gan's Portfolio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
