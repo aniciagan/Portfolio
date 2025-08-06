@@ -70,7 +70,7 @@
             </div>
         </section>
         
-  <main class="container mx-auto px-4 py-12">
+<main class="container mx-auto px-4 py-12">
     <section id="data-analysis" class="pt-12">
         <h2 class="text-4xl sm:text-5xl font-bold text-gray-700 mb-8">Data Cleaning</h2>
         <div class="bg-white p-8 rounded-lg shadow-md">
@@ -78,54 +78,59 @@
                 For this project, I will import and clean data from the following key sources to ensure it is accurate and ready for analysis.
             </p>
 
-            <h3 class="text-2xl font-semibold text-gray-900 mb-4">1. Historical COE Data</h3>
-            <p class="text-lg text-gray-700">
-                The most comprehensive and up-to-date data on COE bidding is available from the Land Transport Authority (LTA) through <a href="https://data.gov.sg" class="text-blue-600 hover:underline">data.gov.sg</a>.
-            </p>
-            <ul class="list-disc list-inside ml-4 space-y-2 text-gray-700 mb-6">
-                <li>
-                    <strong class="font-semibold">COE Bidding Results / Prices:</strong> This dataset provides historical COE prices, quota, and bids received for each bidding exercise and vehicle category.
-                    <a href="https://data.gov.sg/datasets/d_69b3380ad7e51aff3a7dcc84eba52b8a" class="text-blue-600 hover:underline block mt-1">Link</a>
-                </li>
-                <li>
-                    <strong class="font-semibold">Motor Vehicle Quota, Quota Premium And Prevailing Quota Premium, Monthly:</strong> This is another excellent dataset from SingStat that also provides a longer history dating back to 2002.
-                    <a href="https://data.gov.sg/datasets/d_22094bf608253d36c0c63b52d852dd6e/view" class="text-blue-600 hover:underline block mt-1">Link</a>
-                </li>
-            </ul>
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-2">1. Historical COE Data</h3>
+                <p class="text-lg text-gray-700 mb-4">
+                    The most comprehensive and up-to-date data on COE bidding is available from the Land Transport Authority (LTA) through <a href="https://data.gov.sg" class="text-blue-600 hover:underline">data.gov.sg</a>.
+                </p>
+                <ul class="list-disc list-inside ml-6 space-y-2 text-gray-700">
+                    <li>
+                        <strong class="font-semibold">COE Bidding Results / Prices:</strong> This dataset provides historical COE prices, quota, and bids received for each bidding exercise and vehicle category.
+                        <a href="https://data.gov.sg/datasets/d_69b3380ad7e51aff3a7dcc84eba52b8a" class="text-blue-600 hover:underline block mt-1">Link</a>
+                    </li>
+                    <li>
+                        <strong class="font-semibold">Motor Vehicle Quota, Quota Premium And Prevailing Quota Premium, Monthly:</strong> This is another excellent dataset from SingStat that also provides a longer history dating back to 2002.
+                        <a href="https://data.gov.sg/datasets/d_22094bf608253d36c0c63b52d852dd6e/view" class="text-blue-600 hover:underline block mt-1">Link</a>
+                    </li>
+                </ul>
+            </div>
 
-            <h3 class="text-2xl font-semibold text-gray-900 mb-4">2. Motor Vehicle Population Data</h3>
-            <p class="text-lg text-gray-700">
-                The LTA also provides detailed statistics on the motor vehicle population, including new registrations and de-registrations.
-            </p>
-            <ul class="list-disc list-inside ml-4 space-y-2 text-gray-700 mb-6">
-                <li>
-                    <strong class="font-semibold">Annual Motor Vehicle Population by Vehicle Type:</strong> This dataset provides the total number of registered vehicles broken down by type (e.g., cars, motorcycles, taxis) on a yearly basis.
-                    <a href="https://data.gov.sg/dataset/annual-motor-vehicle-population-by-vehicle-type" class="text-blue-600 hover:underline block mt-1">Link</a>
-                </li>
-                <li>
-                    <strong class="font-semibold">LTA Statistics page:</strong> This page is a great resource for a wider range of vehicle statistics, including monthly and yearly breakdowns of registration, de-registration, and population figures.
-                    <a href="https://www.lta.gov.sg/content/ltagov/en/who_we_are/statistics_and_publications/statistics.html" class="text-blue-600 hover:underline block mt-1">Link</a>
-                </li>
-            </ul>
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-2">2. Motor Vehicle Population Data</h3>
+                <p class="text-lg text-gray-700 mb-4">
+                    The LTA also provides detailed statistics on the motor vehicle population, including new registrations and de-registrations.
+                </p>
+                <ul class="list-disc list-inside ml-6 space-y-2 text-gray-700">
+                    <li>
+                        <strong class="font-semibold">Annual Motor Vehicle Population by Vehicle Type:</strong> This dataset provides the total number of registered vehicles broken down by type (e.g., cars, motorcycles, taxis) on a yearly basis.
+                        <a href="https://data.gov.sg/dataset/annual-motor-vehicle-population-by-vehicle-type" class="text-blue-600 hover:underline block mt-1">Link</a>
+                    </li>
+                    <li>
+                        <strong class="font-semibold">LTA Statistics page:</strong> This page is a great resource for a wider range of vehicle statistics, including monthly and yearly breakdowns of registration, de-registration, and population figures.
+                        <a href="https://www.lta.gov.sg/content/ltagov/en/who_we_are/statistics_and_publications/statistics.html" class="text-blue-600 hover:underline block mt-1">Link</a>
+                    </li>
+                </ul>
+            </div>
 
-            <h3 class="text-2xl font-semibold text-gray-900 mb-4">3. Key Economic Indicators</h3>
-            <p class="text-lg text-gray-700">
-                For economic data, the primary source is the Department of Statistics (DOS) Singapore, also known as SingStat.
-            </p>
-            <ul class="list-disc list-inside ml-4 space-y-2 text-gray-700">
-                <li>
-                    <strong class="font-semibold">SingStat Website:</strong> This is the central hub for all official Singapore statistics. You can search for specific indicators like GDP, inflation (Consumer Price Index), and household income.
-                    <a href="https://www.singstat.gov.sg/" class="text-blue-600 hover:underline block mt-1">Link</a>
-                </li>
-                <li>
-                    <strong class="font-semibold">Key Economic Indicators - Ministry of Trade and Industry (MTI):</strong> The MTI website provides high-level economic indicators and reports, which can be useful for a general overview.
-                    <a href="https://www.mti.gov.sg/Resources/Key-Economic-Indicators" class="text-blue-600 hover:underline block mt-1">Link</a>
-                </li>
-            </ul>
+            <div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-2">3. Key Economic Indicators</h3>
+                <p class="text-lg text-gray-700 mb-4">
+                    For economic data, the primary source is the Department of Statistics (DOS) Singapore, also known as SingStat.
+                </p>
+                <ul class="list-disc list-inside ml-6 space-y-2 text-gray-700">
+                    <li>
+                        <strong class="font-semibold">SingStat Website:</strong> This is the central hub for all official Singapore statistics. You can search for specific indicators like GDP, inflation (Consumer Price Index), and household income.
+                        <a href="https://www.singstat.gov.sg/" class="text-blue-600 hover:underline block mt-1">Link</a>
+                    </li>
+                    <li>
+                        <strong class="font-semibold">Key Economic Indicators - Ministry of Trade and Industry (MTI):</strong> The MTI website provides high-level economic indicators and reports, which can be useful for a general overview.
+                        <a href="https://www.mti.gov.sg/Resources/Key-Economic-Indicators" class="text-blue-600 hover:underline block mt-1">Link</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 </main>
-
     
     <footer class="bg-gray-800 text-white text-center p-6 mt-12">
         <p>&copy; 2025 Anicia Gan's Portfolio. All rights reserved.</p>
