@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anicia Gan's Portfolio - BRD & FRD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -15,12 +17,24 @@
             scroll-padding-top: 5rem;
         }
         .nav-link.active {
-            border-bottom: 2px solid #3b82f6;
+            border-bottom: 2px solid #3b82f6; /* Blue-600 */
+        }
+        /* Custom styles for the BRD content to match the portfolio layout */
+        .brd-container {
+            max-width: 100%;
+            padding: 0;
+            box-shadow: none;
+            overflow: visible;
+        }
+        .brd-content {
+            padding: 0;
+            background-color: transparent;
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
+    <!-- Navigation Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
             <div class="text-2xl font-bold text-blue-600 mb-4 sm:mb-0">
@@ -37,38 +51,126 @@
 
     <main class="container mx-auto px-4 py-12">
         <section id="brd-frd" class="pt-12">
-            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-8">Business & Functional Requirements Documents (BRD & FRD)</h1>
-            <div class="bg-white p-8 rounded-lg shadow-md">
-                <p class="text-lg text-gray-700">
-                    Expertise in writing comprehensive Business Requirements Documents (BRD) and Functional Requirements Documents (FRD) that accurately capture project scope and objectives.
-                </p>
-                <div class="mt-8">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Approach to BRD & FRD Development</h3>
-                    <div class="p-6 bg-gray-100 rounded-lg shadow-inner">
-                        <p class="text-gray-700 mb-4">
-                            My process for developing robust requirements documents involves:
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-8">Business Requirements Document (BRD)</h1>
+            <div class="bg-white p-8 rounded-lg shadow-md brd-container">
+                <!-- Content from the original BRD document -->
+                <div class="space-y-6 brd-content">
+                    
+                    <!-- Document Header -->
+                    <header class="border-b-2 border-gray-200 pb-4 mb-4">
+                        <p class="text-lg text-gray-600">
+                            <strong class="font-semibold text-gray-900">Project Title:</strong> Singapore Traffic and COE Analysis Platform<br>
+                            <strong class="font-semibold text-gray-900">Version:</strong> 1.2<br>
+                            <strong class="font-semibold text-gray-900">Date:</strong> August 9, 2025
                         </p>
-                        <ul class="list-disc list-inside ml-4 space-y-2">
-                            <li>Stakeholder Workshops: Facilitating sessions with business users, product owners, and technical teams to elicit and clarify needs.</li>
-                            <li>Scope Definition: Clearly defining what is in and out of scope for the project, establishing boundaries.</li>
-                            <li>Business Goals & Objectives: Documenting the overarching business problems and the desired outcomes of the solution.</li>
-                            <li>Use Cases & Scenarios: Describing how users will interact with the system to achieve specific goals, often including pre-conditions and post-conditions.</li>
-                            <li>Functional Requirements: Detailing specific system behaviors, inputs, outputs, and data processing rules (e.g., "The system shall allow users to upload files up to 10MB in PDF format").</li>
-                            <li>Non-Functional Requirements: Addressing aspects like performance, security, usability, and scalability.</li>
-                            <li>Data Requirements: Specifying data entities, attributes, relationships, and data quality standards.</li>
-                            <li>User Interface (UI) Requirements: Describing screen layouts, navigation, and user interactions (often supplemented with wireframes).</li>
-                            <li>Review Cycles: Conducting iterative reviews with all relevant stakeholders to ensure accuracy, completeness, and consensus.</li>
-                            <li>Traceability Matrix: Maintaining traceability between requirements, design, development, and testing to ensure all needs are met.</li>
+                    </header>
+        
+                    <!-- 1. Introduction -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">1. Introduction</h2>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-1">1.1 Purpose</h3>
+                        <p class="mb-4 text-gray-700">The purpose of this document is to define the business and technical requirements for a data analysis platform. This platform will be used to analyze the complex relationship between Certificate of Entitlement (COE) prices and traffic conditions across Singapore. The objective is to provide a comprehensive, data-driven tool for policymakers and urban planners to evaluate the effectiveness of current vehicle population control measures and inform future transportation strategies.</p>
+        
+                        <h3 class="text-xl font-semibold text-gray-800 mb-1">1.2 Scope</h3>
+                        <p class="text-gray-700">This project will deliver a web-based, analytical dashboard that ingests historical and real-time data from various sources, including the Land Transport Authority (LTA). The platform will provide a suite of tools for data visualization, correlation analysis, and predictive modeling to help stakeholders understand how fluctuations in COE prices, changes in the vehicle quota, and other factors impact traffic flow and congestion.</p>
+                    </section>
+        
+                    <!-- 2. Goals and Objectives -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">2. Goals and Objectives</h2>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong class="font-semibold">Correlate Key Metrics:</strong> Analyze the historical relationship between COE prices, the vehicle population, and traffic congestion data to identify patterns and potential causal links.</li>
+                            <li><strong class="font-semibold">Predictive Modeling:</strong> Develop and validate a model that can predict short-term changes in traffic congestion based on current COE price trends and other variables.</li>
+                            <li><strong class="font-semibold">Enhance Data Transparency:</strong> Provide a centralized and interactive platform that makes complex transportation data accessible and easy to understand for stakeholders.</li>
+                            <li><strong class="font-semibold">Inform Policy Decisions:</strong> Generate data-driven insights and recommendations to support the evaluation and refinement of Singapore's Vehicle Quota System (VQS).</li>
                         </ul>
-                        <p class="text-gray-700 mt-4">
-                            These documents serve as foundational blueprints, guiding development, informing testing strategies, and ensuring alignment across all project phases.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+                    </section>
+        
+                    <!-- 3. Stakeholders -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">3. Stakeholders</h2>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong class="font-semibold">Project Sponsor:</strong> Ministry of Transport (MOT) leadership, responsible for funding and high-level strategy.</li>
+                            <li><strong class="font-semibold">Product Owner:</strong> An urban planning or data analytics representative from the Land Transport Authority (LTA).</li>
+                            <li><strong class="font-semibold">Data Science Team:</strong> The team responsible for building the data pipelines, analytical models, and the user-facing application.</li>
+                            <li><strong class="font-semibold">Policymakers:</strong> LTA and MOT officials who will use the platform's insights for decision-making.</li>
+                            <li><strong class="font-semibold">Academics and Researchers:</strong> External parties who may use the platform's data to conduct their own studies.</li>
+                        </ul>
+                    </section>
+        
+                    <!-- 4. Assumptions -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">4. Assumptions</h2>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>The project team will be granted full access to the required historical and real-time data feeds from the LTA DataMall APIs.</li>
+                            <li>Necessary server infrastructure and computational resources will be allocated for data processing and model training.</li>
+                            <li>The project's success is dependent on the quality and accuracy of the data provided by external sources.</li>
+                            <li>The project will be developed following a phased approach, with an initial version focusing on data visualization before moving to more complex predictive modeling.</li>
+                        </ul>
+                    </section>
+        
+                    <!-- 5. Functional Requirements -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">5. Functional Requirements</h2>
+                        <p class="mb-4 text-gray-700">The platform <strong class="text-gray-900">must</strong> include the following features:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong class="font-semibold">Data Ingestion Module:</strong> A system to automatically collect and parse data from LTA APIs, including `COE Bidding Results`, `Traffic Speed Bands`, `ERP Rates`, and other relevant traffic data.</li>
+                            <li><strong class="font-semibold">Interactive Dashboard:</strong> A web-based dashboard with customizable data visualizations, including charts and graphs showing COE price trends, traffic speeds, and vehicle population over time.</li>
+                            <li><strong class="font-semibold">Correlation Analysis Tool:</strong> A feature that allows users to select different variables (e.g., COE prices, time of day, weather) and instantly generate a correlation analysis.</li>
+                            <li><strong class="font-semibold">Predictive Model Interface:</strong> An interface to input variables and run a pre-trained model to forecast potential traffic congestion scenarios.</li>
+                            <li><strong class="font-semibold">Geospatial Visualization:</strong> An interactive map of Singapore that can overlay real-time traffic speeds and ERP gantry locations.</li>
+                            <li><strong class="font-semibold">Reporting and Export:</strong> The ability to generate and export reports, graphs, and raw data in common formats (e.g., PDF, CSV).</li>
+                        </ul>
+                    </section>
+        
+                    <!-- 6. Non-Functional Requirements -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">6. Non-Functional Requirements</h2>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong class="font-semibold">Performance:</strong> The platform must be able to process and render visualizations of large datasets in under 5 seconds. The predictive model must be able to return a forecast within 10 seconds of a user request.</li>
+                            <li><strong class="font-semibold">Security:</strong> The application must comply with Singapore's government security standards, including secure user authentication and data encryption.</li>
+                            <li><strong class="font-semibold">Usability:</strong> The user interface (UI) should be intuitive for non-technical users and responsive on both desktop and tablet devices.</li>
+                            <li><strong class="font-semibold">Scalability:</strong> The architecture must be scalable to handle a potential increase in data volume from new LTA data sources (e.g., ERP 2.0) without requiring a complete redesign.</li>
+                            <li><strong class="font-semibold">Reliability:</strong> The data ingestion pipelines must have robust error handling and be designed for high uptime.</li>
+                        </ul>
+                    </section>
+        
+                    <!-- 7. Success Criteria -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">7. Success Criteria</h2>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong class="font-semibold">Predictive Accuracy:</strong> Achieve a minimum of 80% accuracy in the predictive model's ability to forecast traffic congestion in key areas.</li>
+                            <li><strong class="font-semibold">Stakeholder Engagement:</strong> The platform is used by at least 15 LTA/MOT employees on a weekly basis within three months of launch.</li>
+                            <li><strong class="font-semibold">Insight Generation:</strong> The platform is used to generate at least three new, actionable policy insights or recommendations within the first six months.</li>
+                            <li><strong class="font-semibold">Positive Feedback:</strong> Achieve an average user satisfaction score of 4 out of 5 or higher in a post-implementation survey.</li>
+                        </ul>
+                    </section>
+        
+                    <!-- 8. Constraints -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">8. Constraints</h2>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong class="font-semibold">Budget:</strong> The project must be completed within the allocated budget of $750,000.</li>
+                            <li><strong class="font-semibold">Timeline:</strong> The initial version of the platform must be launched within 12 months.</li>
+                            <li><strong class="font-semibold">Data Dependency:</strong> The project is highly dependent on the stability and accuracy of external LTA APIs. Any changes to these APIs will require updates to the platform.</li>
+                            <li><strong class="font-semibold">Resources:</strong> The project team is limited to a maximum of five full-time employees.</li>
+                        </ul>
+                    </section>
+        
+                    <!-- 9. User Stories -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">9. User Stories</h2>
+                        <p class="mb-4 text-gray-700">Here are some example user stories that capture the needs of the key stakeholders:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong class="font-semibold">As a Policymaker</strong>, I want to see a historical trend of COE prices overlaid with average traffic speeds on major expressways, so that I can visually identify any correlation between them.</li>
+                            <li><strong class="font-semibold">As a Data Scientist</strong>, I want to access raw data for COE bids and traffic speeds in a downloadable CSV format, so that I can perform custom statistical analysis and model validation.</li>
+                            <li><strong class="font-semibold">As an Urban Planner</strong>, I want to use the geospatial visualization to see real-time traffic speeds across different districts, so that I can understand where congestion is most severe and when it occurs.</li>
+                            <li><strong class="font-semibold">As a Project Sponsor</strong>, I want to view a dashboard with key performance indicators (KPIs) like the predictive model's accuracy and the number of generated reports, so that I can monitor the project's success.</li>
+                            <li><strong class="font-semibold">As an Academic Researcher</strong>, I want to be able to run a predictive model with different hypothetical COE price scenarios, so that I can study the potential impact on future traffic conditions.</li>
+                        </ul>
+                    </section>
 
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center p-6 mt-12">
         <p>&copy; 2025 Anicia Gan's Portfolio. All rights reserved.</p>
     </footer>
