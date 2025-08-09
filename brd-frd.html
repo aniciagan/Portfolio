@@ -50,8 +50,10 @@
     </header>
 
     <main class="container mx-auto px-4 py-12">
-        <section id="brd-frd" class="pt-12">
-            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-8">Business Requirements Document (BRD)</h1>
+        <!-- BRD Section -->
+        <section id="brd" class="pt-12">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-8">Business & Functional Requirements Documents (BRD & FRD)</h1>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Business Requirements Document (BRD)</h2>
             <div class="bg-white p-8 rounded-lg shadow-md brd-container">
                 <!-- Content from the original BRD document -->
                 <div class="space-y-6 brd-content">
@@ -67,17 +69,17 @@
         
                     <!-- 1. Introduction -->
                     <section>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-2">1. Introduction</h2>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-1">1.1 Purpose</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">1. Introduction</h3>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-1">1.1 Purpose</h4>
                         <p class="mb-4 text-gray-700">The purpose of this document is to define the business and technical requirements for a data analysis platform. This platform will be used to analyze the complex relationship between Certificate of Entitlement (COE) prices and traffic conditions across Singapore. The objective is to provide a comprehensive, data-driven tool for policymakers and urban planners to evaluate the effectiveness of current vehicle population control measures and inform future transportation strategies.</p>
         
-                        <h3 class="text-xl font-semibold text-gray-800 mb-1">1.2 Scope</h3>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-1">1.2 Scope</h4>
                         <p class="text-gray-700">This project will deliver a web-based, analytical dashboard that ingests historical and real-time data from various sources, including the Land Transport Authority (LTA). The platform will provide a suite of tools for data visualization, correlation analysis, and predictive modeling to help stakeholders understand how fluctuations in COE prices, changes in the vehicle quota, and other factors impact traffic flow and congestion.</p>
                     </section>
         
                     <!-- 2. Goals and Objectives -->
                     <section>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-2">2. Goals and Objectives</h2>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">2. Goals and Objectives</h3>
                         <ul class="list-disc list-inside space-y-2 text-gray-700">
                             <li><strong class="font-semibold">Correlate Key Metrics:</strong> Analyze the historical relationship between COE prices, the vehicle population, and traffic congestion data to identify patterns and potential causal links.</li>
                             <li><strong class="font-semibold">Predictive Modeling:</strong> Develop and validate a model that can predict short-term changes in traffic congestion based on current COE price trends and other variables.</li>
@@ -88,7 +90,7 @@
         
                     <!-- 3. Stakeholders -->
                     <section>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-2">3. Stakeholders</h2>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">3. Stakeholders</h3>
                         <ul class="list-disc list-inside space-y-2 text-gray-700">
                             <li><strong class="font-semibold">Project Sponsor:</strong> Ministry of Transport (MOT) leadership, responsible for funding and high-level strategy.</li>
                             <li><strong class="font-semibold">Product Owner:</strong> An urban planning or data analytics representative from the Land Transport Authority (LTA).</li>
@@ -100,7 +102,7 @@
         
                     <!-- 4. Assumptions -->
                     <section>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-2">4. Assumptions</h2>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">4. Assumptions</h3>
                         <ul class="list-disc list-inside space-y-2 text-gray-700">
                             <li>The project team will be granted full access to the required historical and real-time data feeds from the LTA DataMall APIs.</li>
                             <li>Necessary server infrastructure and computational resources will be allocated for data processing and model training.</li>
@@ -111,7 +113,7 @@
         
                     <!-- 5. Functional Requirements -->
                     <section>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-2">5. Functional Requirements</h2>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">5. Functional Requirements</h3>
                         <p class="mb-4 text-gray-700">The platform <strong class="text-gray-900">must</strong> include the following features:</p>
                         <ul class="list-disc list-inside space-y-2 text-gray-700">
                             <li><strong class="font-semibold">Data Ingestion Module:</strong> A system to automatically collect and parse data from LTA APIs, including `COE Bidding Results`, `Traffic Speed Bands`, `ERP Rates`, and other relevant traffic data.</li>
@@ -125,7 +127,7 @@
         
                     <!-- 6. Non-Functional Requirements -->
                     <section>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-2">6. Non-Functional Requirements</h2>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">6. Non-Functional Requirements</h3>
                         <ul class="list-disc list-inside space-y-2 text-gray-700">
                             <li><strong class="font-semibold">Performance:</strong> The platform must be able to process and render visualizations of large datasets in under 5 seconds. The predictive model must be able to return a forecast within 10 seconds of a user request.</li>
                             <li><strong class="font-semibold">Security:</strong> The application must comply with Singapore's government security standards, including secure user authentication and data encryption.</li>
@@ -137,7 +139,7 @@
         
                     <!-- 7. Success Criteria -->
                     <section>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-2">7. Success Criteria</h2>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">7. Success Criteria</h3>
                         <ul class="list-disc list-inside space-y-2 text-gray-700">
                             <li><strong class="font-semibold">Predictive Accuracy:</strong> Achieve a minimum of 80% accuracy in the predictive model's ability to forecast traffic congestion in key areas.</li>
                             <li><strong class="font-semibold">Stakeholder Engagement:</strong> The platform is used by at least 15 LTA/MOT employees on a weekly basis within three months of launch.</li>
@@ -148,7 +150,7 @@
         
                     <!-- 8. Constraints -->
                     <section>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-2">8. Constraints</h2>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">8. Constraints</h3>
                         <ul class="list-disc list-inside space-y-2 text-gray-700">
                             <li><strong class="font-semibold">Budget:</strong> The project must be completed within the allocated budget of $750,000.</li>
                             <li><strong class="font-semibold">Timeline:</strong> The initial version of the platform must be launched within 12 months.</li>
@@ -159,7 +161,7 @@
         
                     <!-- 9. User Stories -->
                     <section>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-2">9. User Stories</h2>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">9. User Stories</h3>
                         <p class="mb-4 text-gray-700">Here are some example user stories that capture the needs of the key stakeholders:</p>
                         <ul class="list-disc list-inside space-y-2 text-gray-700">
                             <li><strong class="font-semibold">As a Policymaker</strong>, I want to see a historical trend of COE prices overlaid with average traffic speeds on major expressways, so that I can visually identify any correlation between them.</li>
@@ -169,6 +171,65 @@
                             <li><strong class="font-semibold">As an Academic Researcher</strong>, I want to be able to run a predictive model with different hypothetical COE price scenarios, so that I can study the potential impact on future traffic conditions.</li>
                         </ul>
                     </section>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- FRD Section -->
+        <section id="frd" class="pt-12 mt-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Functional Requirements Document (FRD)</h2>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="space-y-6">
+                    <p class="mb-4 text-gray-700">
+                        This document details the specific functional requirements for the **Singapore Traffic and COE Analysis Platform**, outlining the software's behavior and the expected user interactions.
+                    </p>
+
+                    <!-- FRD 1. Dashboard UI Requirements -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">1. Dashboard UI Requirements</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong class="font-semibold">Login Page:</strong> The platform shall present a secure login page for user authentication.</li>
+                            <li><strong class="font-semibold">Dashboard Layout:</strong> The main dashboard shall feature a customizable, widget-based layout, allowing users to arrange and resize data visualization components.</li>
+                            <li><strong class="font-semibold">Navigation:</strong> A sidebar or top navigation menu shall provide easy access to different sections, including "Dashboard," "Correlation Analysis," and "Predictive Modeling."</li>
+                            <li><strong class="font-semibold">Date/Time Filters:</strong> All visualizations shall include dynamic filters for selecting specific date ranges and time periods (e.g., "Last 30 days," "Q2 2024," "Custom Range").</li>
+                        </ul>
+                    </section>
+
+                    <!-- FRD 2. Data Visualization Requirements -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">2. Data Visualization Requirements</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong class="font-semibold">Line Charts:</strong> The system shall display line charts for COE prices and traffic speeds over time. Users must be able to overlay multiple data series on a single chart for comparison.</li>
+                            <li><strong class="font-semibold">Geospatial Map:</strong> An interactive map of Singapore shall be rendered. This map must be able to display traffic speed data as color-coded lines on major roads, with green for free-flowing traffic, yellow for moderate congestion, and red for heavy congestion. The map shall also pinpoint the locations of ERP gantries.</li>
+                            <li><strong class="font-semibold">Pie Charts:</strong> The system shall generate pie charts to visualize the distribution of COE bids by category (e.g., Car, Motorcycle, Goods Vehicle).</li>
+                        </ul>
+                    </section>
+
+                    <!-- FRD 3. Correlation Analysis Requirements -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">3. Correlation Analysis Requirements</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong class="font-semibold">Variable Selection:</strong> Users shall be able to select at least two variables from a dropdown menu (e.g., `COE Price`, `Average Traffic Speed`, `Vehicle Population`) to run a correlation analysis.</li>
+                            <li><strong class="font-semibold">Analysis Execution:</strong> Upon user request, the system shall calculate and display a correlation coefficient (e.g., Pearson correlation) between the selected variables.</li>
+                            <li><strong class="font-semibold">Visualization:</strong> The results of the correlation analysis shall be visualized using a scatter plot with a regression line.</li>
+                        </ul>
+                    </section>
+
+                    <!-- FRD 4. Predictive Modeling Requirements -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">4. Predictive Modeling Requirements</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong class="font-semibold">Model Input:</strong> The system shall provide an interface where users can input hypothetical values for key variables (e.g., next COE price, new vehicle quota).</li>
+                            <li><strong class="font-semibold">Forecast Generation:</strong> The system shall run the predictive model and generate a forecast of future traffic congestion, represented as a numerical value (e.g., average speed) and a confidence interval.</li>
+                            <li><strong class="font-semibold">Scenario Comparison:</strong> Users shall be able to save and compare multiple predictive scenarios side-by-side.</li>
+                        </ul>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center p-6 mt-12">
