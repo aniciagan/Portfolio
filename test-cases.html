@@ -58,52 +58,135 @@
                         </ul>
                         <p class="text-gray-700 mt-4 font-semibold">Example Test Case Structure:</p>
                         <div class="bg-white p-4 rounded border border-gray-300">
-                            <table class="min-w-full text-sm text-gray-700">
-                                <thead>
-                                    <tr class="bg-gray-200">
-                                        <th class="px-4 py-2 text-left">Test Case ID</th>
-                                        <th class="px-4 py-2 text-left">Requirement ID(s)</th>
-                                        <th class="px-4 py-2 text-left">Test Case Name</th>
-                                        <th class="px-4 py-2 text-left">Pre-conditions</th>
-                                        <th class="px-4 py-2 text-left">Steps</th>
-                                        <th class="px-4 py-2 text-left">Expected Result</th>
-                                        <th class="px-4 py-2 text-left">Status</th>
-                                        <th class="px-4 py-2 text-left">Notes</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="border px-4 py-2">TC_LOGIN_001</td>
-                                        <td class="border px-4 py-2">FR_AUTH_001</td>
-                                        <td class="border px-4 py-2">Successful Login with Valid Credentials</td>
-                                        <td class="border px-4 py-2">User account exists and is active.</td>
-                                        <td class="border px-4 py-2">
-                                            1. Navigate to Login Page.<br>
-                                            2. Enter valid username.<br>
-                                            3. Enter valid password.<br>
-                                            4. Click "Login" button.
-                                        </td>
-                                        <td class="border px-4 py-2">User is successfully logged in and redirected to the Dashboard.</td>
-                                        <td class="border px-4 py-2"></td>
-                                        <td class="border px-4 py-2"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="border px-4 py-2">TC_LOGIN_002</td>
-                                        <td class="border px-4 py-2">FR_AUTH_001</td>
-                                        <td class="border px-4 py-2">Failed Login with Invalid Password</td>
-                                        <td class="border px-4 py-2">User account exists and is active.</td>
-                                        <td class="border px-4 py-2">
-                                            1. Navigate to Login Page.<br>
-                                            2. Enter valid username.<br>
-                                            3. Enter invalid password.<br>
-                                            4. Click "Login" button.
-                                        </td>
-                                        <td class="border px-4 py-2">System displays error message: "Invalid username or password." User remains on the login page.</td>
-                                        <td class="border px-4 py-2"></td>
-                                        <td class="border px-4 py-2"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Functional Test Cases 📊</h4>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full text-sm text-gray-700 table-auto">
+                                    <thead>
+                                        <tr class="bg-gray-200">
+                                            <th class="px-4 py-2 text-left">Test Case ID</th>
+                                            <th class="px-4 py-2 text-left">Requirement ID(s)</th>
+                                            <th class="px-4 py-2 text-left">Test Case Name</th>
+                                            <th class="px-4 py-2 text-left">Pre-conditions</th>
+                                            <th class="px-4 py-2 text-left">Steps</th>
+                                            <th class="px-4 py-2 text-left">Expected Result</th>
+                                            <th class="px-4 py-2 text-left">Status</th>
+                                            <th class="px-4 py-2 text-left">Notes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border px-4 py-2">TC-001</td>
+                                            <td class="border px-4 py-2">5.1, 6.5</td>
+                                            <td class="border px-4 py-2">Data Ingestion - COE Bidding</td>
+                                            <td class="border px-4 py-2">A live data feed from the LTA COE Bidding Results API is available.</td>
+                                            <td class="border px-4 py-2">1. The data ingestion module runs at its scheduled time.<br>2. The module connects to the LTA COE Bidding Results API.<br>3. Data is parsed and stored in the database.</td>
+                                            <td class="border px-4 py-2">The latest COE bidding results are accurately ingested and available in the database within the expected timeframe.</td>
+                                            <td class="border px-4 py-2">Not Run</td>
+                                            <td class="border px-4 py-2">Tests the reliability of the ingestion pipeline.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border px-4 py-2">TC-002</td>
+                                            <td class="border px-4 py-2">5.2, 6.3</td>
+                                            <td class="border px-4 py-2">Interactive Dashboard - Data Visualization</td>
+                                            <td class="border px-4 py-2">User is logged in and has access to the dashboard.</td>
+                                            <td class="border px-4 py-2">1. Navigate to the main dashboard.<br>2. Select a date range (e.g., last 30 days) and COE price data.<br>3. Select `Traffic Speed Bands` data to overlay.</td>
+                                            <td class="border px-4 py-2">The dashboard displays a line chart showing COE price trends and traffic speeds on a single, clean chart. The visualization renders within **5 seconds**.</td>
+                                            <td class="border px-4 py-2">Not Run</td>
+                                            <td class="border px-4 py-2">Verifies the core data visualization functionality.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border px-4 py-2">TC-003</td>
+                                            <td class="border px-4 py-2">5.3, FRD 3.1, 3.2</td>
+                                            <td class="border px-4 py-2">Correlation Analysis - Positive Correlation</td>
+                                            <td class="border px-4 py-2">User is logged in and on the "Correlation Analysis" page.</td>
+                                            <td class="border px-4 py-2">1. Select `COE Price` as Variable 1.<br>2. Select `Vehicle Population` as Variable 2.<br>3. Click the "Run Analysis" button.</td>
+                                            <td class="border px-4 py-2">The system calculates and displays a **positive correlation coefficient**. A scatter plot with a regression line showing the positive trend is displayed.</td>
+                                            <td class="border px-4 py-2">Not Run</td>
+                                            <td class="border px-4 py-2">Tests the correlation analysis tool with variables expected to have a positive relationship.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border px-4 py-2">TC-004</td>
+                                            <td class="border px-4 py-2">5.4, FRD 4.1, 4.2</td>
+                                            <td class="border px-4 py-2">Predictive Model - Traffic Congestion Forecast</td>
+                                            <td class="border px-4 py-2">The predictive model has been trained and validated.</td>
+                                            <td class="border px-4 py-2">1. Navigate to the "Predictive Modeling" interface.<br>2. Input a hypothetical increase in COE prices for the next quarter.<br>3. Click "Generate Forecast."</td>
+                                            <td class="border px-4 py-2">The system returns a forecast of future traffic congestion within **10 seconds**. The forecast includes a numerical value and a confidence interval.</td>
+                                            <td class="border px-4 py-2">Not Run</td>
+                                            <td class="border px-4 py-2">Tests the functionality and performance of the predictive model interface.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border px-4 py-2">TC-005</td>
+                                            <td class="border px-4 py-2">5.5, FRD 2.2</td>
+                                            <td class="border px-4 py-2">Geospatial Map - Real-time Visualization</td>
+                                            <td class="border px-4 py-2">A real-time data feed for traffic speeds and ERP gantries is active.</td>
+                                            <td class="border px-4 py-2">1. Navigate to the geospatial map.<br>2. Zoom in and out of different districts.</td>
+                                            <td class="border px-4 py-2">The map correctly overlays color-coded traffic speed lines (green, yellow, red) on major roads and accurately pinpoints the locations of ERP gantries. The map is responsive and does not lag.</td>
+                                            <td class="border px-4 py-2">Not Run</td>
+                                            <td class="border px-4 py-2">Verifies the interactive map's core functionality and performance.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border px-4 py-2">TC-006</td>
+                                            <td class="border px-4 py-2">5.6</td>
+                                            <td class="border px-4 py-2">Reporting & Export - PDF Generation</td>
+                                            <td class="border px-4 py-2">A report has been created on the dashboard.</td>
+                                            <td class="border px-4 py-2">1. View a correlation analysis report.<br>2. Click the "Export as PDF" button.</td>
+                                            <td class="border px-4 py-2">A PDF file is generated and downloaded. The file contains the correct charts, graphs, and data as displayed on the screen.</td>
+                                            <td class="border px-4 py-2">Not Run</td>
+                                            <td class="border px-4 py-2">Confirms that the reporting feature works as expected.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h4 class="text-xl font-bold text-gray-900 mt-8 mb-4">Non-Functional Test Cases 🛡️</h4>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full text-sm text-gray-700 table-auto">
+                                    <thead>
+                                        <tr class="bg-gray-200">
+                                            <th class="px-4 py-2 text-left">Test Case ID</th>
+                                            <th class="px-4 py-2 text-left">Requirement ID(s)</th>
+                                            <th class="px-4 py-2 text-left">Test Case Name</th>
+                                            <th class="px-4 py-2 text-left">Pre-conditions</th>
+                                            <th class="px-4 py-2 text-left">Steps</th>
+                                            <th class="px-4 py-2 text-left">Expected Result</th>
+                                            <th class="px-4 py-2 text-left">Status</th>
+                                            <th class="px-4 py-2 text-left">Notes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border px-4 py-2">NFR-001</td>
+                                            <td class="border px-4 py-2">6.2, FRD 1.1</td>
+                                            <td class="border px-4 py-2">Security - Invalid Login</td>
+                                            <td class="border px-4 py-2">A user account exists.</td>
+                                            <td class="border px-4 py-2">1. Enter an invalid password or username on the login page.<br>2. Attempt to log in.</td>
+                                            <td class="border px-4 py-2">The system displays a clear error message (e.g., "Invalid username or password") and prevents the user from logging in.</td>
+                                            <td class="border px-4 py-2">Not Run</td>
+                                            <td class="border px-4 py-2">Basic security test for user authentication.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border px-4 py-2">NFR-002</td>
+                                            <td class="border px-4 py-2">6.1</td>
+                                            <td class="border px-4 py-2">Performance - Large Dataset Load</td>
+                                            <td class="border px-4 py-2">A large volume of historical data (e.g., 5 years) is available in the database.</td>
+                                            <td class="border px-4 py-2">1. Log in to the platform.<br>2. Select a `Custom Range` filter for a five-year period on the main dashboard.</td>
+                                            <td class="border px-4 py-2">All selected data visualizations render completely in **under 5 seconds**.</td>
+                                            <td class="border px-4 py-2">Not Run</td>
+                                            <td class="border px-4 py-2">Tests the performance requirement for handling large datasets.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border px-4 py-2">NFR-003</td>
+                                            <td class="border px-4 py-2">6.3</td>
+                                            <td class="border px-4 py-2">Usability - Responsive UI</td>
+                                            <td class="border px-4 py-2">A tablet or mobile device is used to access the platform.</td>
+                                            <td class="border px-4 py-2">1. Open the platform's URL on a tablet browser.<br>2. Navigate through the dashboard and other pages.</td>
+                                            <td class="border px-4 py-2">The UI adapts correctly to the smaller screen size. All elements are readable and clickable without requiring horizontal scrolling.</td>
+                                            <td class="border px-4 py-2">Not Run</td>
+                                            <td class="border px-4 py-2">Verifies the usability and responsiveness of the user interface.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <p class="text-gray-700 mt-4">
                             My goal is to facilitate thorough testing, ensuring high-quality software delivery and a seamless user experience.
@@ -120,3 +203,4 @@
 
 </body>
 </html>
+```
