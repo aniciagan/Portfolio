@@ -111,55 +111,11 @@
                             <li>BPMN (Business Process Model and Notation): For mapping end-to-end business workflows, showing swimlanes, tasks, decisions, and events. This helps identify bottlenecks and inefficiencies.</li>
                             <li>UML (Unified Modeling Language): Specifically, Use Case Diagrams to outline system functionalities from a user's perspective, and Activity Diagrams or Sequence Diagrams to detail process flows or object interactions within the system.</li>
                             <li>Flowcharts: Simple and effective for illustrating decision trees or step-by-step procedures.</li>
-                            <li>Data Flow Diagrams (DFDs): To visualize how data moves through a system.</li>
                         </ul>
                         <p class="text-gray-700 mt-4">
                             These diagrams ensure all stakeholders have a clear, shared understanding of the proposed solution before development begins, minimizing misinterpretations and rework.
-                        <pre>
-                    [Data Scientist]     <->     [Data Ingestion Module]     <->     [LTA APIs]     <->     [Database]     <->     [Alert/Notification System]
-                            |                            |                                |                       |                               |
-                            |                            |                                |                       |                               |
-                            |      1. Schedule Job       |                                |                       |                               |
-                            |<---------------------------|                                |                       |                               |
-                            |                            |                                |                       |                               |
-                            |                            |     2. Fetch Data (request)    |                       |                               |
-                            |                            |------------------------------->|                       |                               |
-                            |                            |                                |                       |                               |
-                            |                            |                                |                       |                               |
-                            |                            |     3. Data (response)         |                       |                               |
-                            |                            |<-------------------------------|                       |                               |
-                            |                            |                                |                       |                               |
-                            |                            | 4. Validate Data               |                       |                               |
-                            |                            |<-------------------------------|                       |                               |
-                            |                            |                                |                       |                               |
-                            |                            |     [alt: API Failure or Downtime]                      |                               |
-                            |                            |------------------------------->| 5. Retry Connection   |                               |
-                            |                            |            (loop)              |<----------------------|                               |
-                            |                            |<------------------------------ | 6. Failed Connection  |                               |
-                            |                            |                                |                       |                               |
-                            |                            | 7. Log Failure & Send Alert    |                       |                               |
-                            |                            |-------------------------------------------------------->| 8. Receive Alert              |
-                            |                            |<-------------------------------------------------------| 9. Notification               |
-                            |                            |                                |                       |------------------------------->| 10. Alert: "LTA API Down"|
-                            |                            |                                |                       |                               |----------------------------->|
-                            |                            |                                |                       |                               |
-                            |                            |     [opt: Data Anomalies]                               |                               |
-                            |                            |                                |                       |                               |
-                            |                            | 11. Log Anomaly                |                       |                               |
-                            |                            |-------------------------------------------------------->| 12. Receive Alert             |
-                            |                            |                                |                       |                               |
-                            |                            |                                |                       |------------------------------->| 13. Alert: "Data Anomaly"|
-                            |                            |                                |                       |                               |----------------------------->|
-                            |                            |                                |                       |                               |
-                            |                            |     [opt: Successful Ingestion]                         |                               |
-                            |                            |                                |                       |                               |
-                            |                            | 14. Store Data                 |                       |                               |
-                            |                            |--------------------------------->| 15. Store Data        |                               |
-                            |                            |                                |<----------------------| 16. Data Stored               |
-                            |                            | 17. Update Timestamp           |                       |                               |
-                            |                            |<------------------------------- | 18. Timestamp Updated |                               |
-                            |                            |                                |                       |                               |
-                        </pre>
+
+                            <img src="Sequence diagram.png" alt="UML">
                         </p>
                     </div>
                 </div>
