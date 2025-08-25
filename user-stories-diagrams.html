@@ -46,18 +46,18 @@
                     <h3 class="text-2xl font-semibold text-gray-900 mb-4">Crafting Effective User Stories</h3>
                     <div class="p-6 bg-gray-100 rounded-lg shadow-inner">
                         <p class="text-gray-700 mb-4">
-                            User stories are crucial for Agile development, focusing on user value. My approach ensures they are INVEST (Independent, Negotiable, Valuable, Estimable, Small, Testable).
+                            User stories are crucial for Agile development as they focus on delivering user value. My approach ensures they are SMART (Specific, Measurable, Achievable, Relevant, Testable).
                         </p>
                         <p class="text-gray-700 mb-4 font-semibold">User Story: Data Ingestion and Validation</p>
                         <div class="bg-white p-4 rounded border border-gray-300 mb-6">
                             <p class="font-mono text-gray-800">As a Data Scientist on the project team,</p>
-                            <p class="font-mono text-gray-800">I want to have reliable data ingestion module that automatically collects and validates the latest data from LTA APIs (e.g., COE Bidding Results, Traffic Speed Bands),</p>
+                            <p class="font-mono text-gray-800">I want to have a reliable data ingestion module that automatically collects and validates the latest data from LTA APIs (e.g., COE Bidding Results, Traffic Speed Bands),</p>
                             <p class="font-mono text-gray-800">so that I can ensure the analytical models are always trained on accurate, up-to-date information and receive alerts for any data anomalies or API failures.</p>
                             
                             <p class="text-sm text-gray-600 mt-2">Acceptance Criteria:</p>
                             <ul class="list-disc list-inside ml-4 text-sm text-gray-600">
 
-    <h2>Scenarios: Successful Data Ingestion<</h2>
+    <h2>Scenario 1 : Successful Data Ingestion</h2>
     <ul>
         <li><span class="given">Given</span> that the LTA APIs are operational and providing valid data.</li>
         <li><span class="when">When</span> the data ingestion module runs on its scheduled cadence (e.g., daily for COE Bidding Results).</li>
@@ -67,8 +67,9 @@
     </ul>
 
     <hr>
+    <br>
 
-    <h3>Scenario: Handling Data Anomalies</h3>
+    <h3>Scenario 2: Handling Data Anomalies</h3>
     <ul>
         <li><span class="given">Given</span> that the data ingestion module is processing a data feed.</li>
         <li><span class="when">When</span> a data anomaly is detected (e.g., a missing value in a required field, a data type mismatch, or a value outside a predefined range).</li>
@@ -77,8 +78,9 @@
     </ul>
 
     <hr>
+    <br>
 
-    <h3>Scenario: API Failure or Downtime</h3>
+    <h3>Scenario 3: API Failure or Downtime</h3>
     <ul>
         <li><span class="given">Given</span> that the data ingestion module is attempting to connect to an LTA API.</li>
         <li><span class="when">When</span> the API is down, returns an error status code, or is otherwise inaccessible.</li>
@@ -87,8 +89,9 @@
     </ul>
 
     <hr>
+    <br>
 
-    <h3>Scenario: Timeliness of Data</h3>
+    <h3>Scenario 4: Timeliness of Data</h3>
     <ul>
         <li><span class="given">Given</span> that a new round of COE Bidding Results is published by the LTA API.</li>
         <li><span class="when">When</span> the next scheduled data ingestion job runs.</li>
@@ -96,6 +99,7 @@
         <li><span class="and">And</span> a report or dashboard must be available to show the ingestion timestamp for each data source, ensuring data freshness.</li>
     </ul>
 
+    <br>
                             </ul>
                         </div>
                         <h3 class="text-2xl font-semibold text-gray-900 mb-4 mt-8">Visualizing Processes with Diagrams</h3>
